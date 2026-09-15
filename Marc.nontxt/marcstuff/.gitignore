@@ -1,0 +1,47 @@
+## .NET build output
+[Bb]in/
+[Oo]bj/
+
+## Visual Studio and VS Code user files
+.vs/
+.vscode/
+*.user
+*.userosscache
+*.suo
+*.userprefs
+*.rsuser
+
+## Rider and ReSharper
+.idea/
+_ReSharper*/
+*.DotSettings.user
+
+## NuGet
+*.nupkg
+*.snupkg
+.nuget/
+packages/
+
+## Test results and coverage
+TestResults/
+*.trx
+coverage/
+.coverage
+.coveragexml
+
+## Generated files
+Generated/
+*.generated.cs
+*.g.cs
+*.g.i.cs
+
+## Logs and temporary files
+*.log
+*.tmp
+*.temp
+*.swp
+*.swo
+
+## OS files
+.DS_Store
+Thumbs.db
