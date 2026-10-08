@@ -1,0 +1,74 @@
+﻿<Window x:Class="WpfDispatcherSimulationApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfDispatcherSimulationApp"
+        xmlns:UserControls="clr-namespace:WpfDispatcherSimulationApp.View.UserControls"
+        mc:Ignorable="d"
+            Title="Dispatcher Simulation System (DSS)" Height="450" Width="800" Icon="/Assets/fire_truck_icon.png">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition MinWidth="200"/>
+            <ColumnDefinition Width="15"/>
+            <ColumnDefinition Width="500" MinWidth="50" MaxWidth="1000"/>
+        </Grid.ColumnDefinitions>
+
+        <!--Left Side (Controls)-->
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40"/>
+                <RowDefinition MinHeight="100"/>
+                <RowDefinition Height="10" />
+                <RowDefinition Height="130" MinHeight="70"/>
+            </Grid.RowDefinitions>
+            <Rectangle Grid.Row="0" Fill="Gray"/>
+            <Button Grid.Row="1" Content="Scale Map" Click="ScaleMap_Click"/>
+            <GridSplitter HorizontalAlignment="Stretch" Grid.Row="2" Background="#FF5D4545" Foreground="#FF5A4242"/>
+
+
+            <Grid Grid.Row="3">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <UserControls:ObjectList x:Name="IncidentList" Grid.Column="0"/>
+                <UserControls:ObjectList x:Name="StationList" Grid.Column="1"/>
+                <UserControls:ObjectList x:Name="UnitList" Grid.Column="2"/>
+
+
+            </Grid>
+        </Grid>
+
+        <!--Main Splitter-->
+        <GridSplitter Grid.Column="1" HorizontalAlignment="Stretch" Background="#FF946B6B" Foreground="#FFBF6161"/>
+
+        <!--Right Side (Map)-->
+        <Grid Grid.Column="2">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition Height="5"/>
+                <RowDefinition Height="150"/>
+            </Grid.RowDefinitions>
+
+
+            <!-- Map -->
+            <UserControls:Map x:Name="mapDisplay"/>
+
+            <!-- Selected Item Information -->
+            <Rectangle Grid.Row="1" Fill="Gray"/>
+            <Grid Grid.Row="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+            </Grid>
+
+        </Grid>
+
+
+    </Grid>
+</Window>

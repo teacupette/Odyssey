@@ -1,0 +1,10 @@
+{
+  "version": "0.2.1",
+  "tasks": [
+    {
+      "taskLabel": "task-ambulance",
+      "appliesTo": "WpfDispatcherSimulationApp/WpfDispatcherSimulationApp/Assets/ambulance.png",
+      "type": "launch"
+    }
+  ]
+}
