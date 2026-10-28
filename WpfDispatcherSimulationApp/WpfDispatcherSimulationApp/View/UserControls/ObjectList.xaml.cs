@@ -24,7 +24,7 @@ namespace WpfDispatcherSimulationApp.View.UserControls
             this.DataContext = this;
         }
 
-        public String ObjectListHedder { get; set; }
+        public string ObjectListHedder { get; set; } = "!Missing Hedder!";  
 
 
         public void addNewObject(string newUnitName, string iconPath)
