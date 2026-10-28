@@ -34,9 +34,9 @@
                     <ColumnDefinition/>
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
-                <UserControls:ObjectList x:Name="IncidentList" Grid.Column="0"/>
-                <UserControls:ObjectList x:Name="StationList" Grid.Column="1"/>
-                <UserControls:ObjectList x:Name="UnitList" Grid.Column="2"/>
+                <UserControls:ObjectList x:Name="IncidentList" ObjectListHedder="Incidents" Grid.Column="0"/>
+                <UserControls:ObjectList x:Name="StationList" ObjectListHedder="Stations" Grid.Column="1"/>
+                <UserControls:ObjectList x:Name="UnitList" ObjectListHedder="Units" Grid.Column="2"/>
 
 
             </Grid>

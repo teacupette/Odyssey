@@ -31,10 +31,5 @@ namespace WpfDispatcherSimulationApp.View.UserControls
         {
             StackPanel123.Children.Add(new SelectableListObject(newUnitName, iconPath));
         }
-
-        public void changeHeader(string headerName)
-        {
-            ObjectListHedder = headerName;
-        }
     }
 }

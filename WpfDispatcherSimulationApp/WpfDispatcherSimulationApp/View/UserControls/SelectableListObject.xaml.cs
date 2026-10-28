@@ -29,17 +29,15 @@ namespace WpfDispatcherSimulationApp.View.UserControls
 
 
 
-        //AI
+        //Made with AI (Because I had a lot of problems with Assets and Paths)
         public void changeIcon(string iconPath)
         {
-            // Wir bauen den Pfad so um, dass er absolut aus der Anwendung geladen wird
             string fullPackUri = $"pack://application:,,,/Assets/{iconPath}";
 
             BitmapImage bitmap = new BitmapImage();
             bitmap.BeginInit();
             bitmap.UriSource = new Uri(fullPackUri, UriKind.Absolute);
 
-            // Für Pixel-Art: Verhindert Unschärfe beim Skalieren
             RenderOptions.SetBitmapScalingMode(bitmap, BitmapScalingMode.NearestNeighbor);
 
             bitmap.EndInit();
