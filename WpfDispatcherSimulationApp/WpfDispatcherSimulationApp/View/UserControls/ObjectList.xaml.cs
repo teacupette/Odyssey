@@ -29,7 +29,7 @@ namespace WpfDispatcherSimulationApp.View.UserControls
 
         public void addNewObject(string newUnitName, string iconPath)
         {
-            StackPanel123.Children.Add(new SelectableListObject(newUnitName, iconPath));
+            Stackpanel_list.Children.Add(new SelectableListObject(newUnitName, iconPath));
         }
     }
 }

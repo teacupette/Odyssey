@@ -17,7 +17,7 @@
 
         <Rectangle Grid.Row="1" Fill="#FF75747D"/>
         <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto" Margin="5">
-            <StackPanel Name="StackPanel123">
+            <StackPanel Name="Stackpanel_list">
                 
             </StackPanel>
         </ScrollViewer>
