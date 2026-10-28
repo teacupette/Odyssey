@@ -18,10 +18,12 @@ namespace WpfDispatcherSimulationApp.View.UserControls
     /// </summary>
     public partial class SelectableListObject : UserControl
     {
-        public SelectableListObject(string name, string iconPath)
+        private SelectedObjectView selectedObjectViewer;
+        public SelectableListObject(string name, string iconPath, SelectedObjectView selectedObjectView)
         {
             InitializeComponent();
-            
+
+            this.selectedObjectViewer = selectedObjectView;
             unitname.Text = name;
             changeIcon(iconPath);
         }
@@ -29,7 +31,7 @@ namespace WpfDispatcherSimulationApp.View.UserControls
 
 
 
-        //Made with AI (Because I had a lot of problems with Assets and Paths)
+        //Made with AI (Because I had a lot of problems with Loading Assets and Paths)
         public void changeIcon(string iconPath)
         {
             string fullPackUri = $"pack://application:,,,/Assets/{iconPath}";
@@ -45,5 +47,9 @@ namespace WpfDispatcherSimulationApp.View.UserControls
             icon.Source = bitmap;
         }
 
+        private void selectObjectButton_Click(object sender, RoutedEventArgs e)
+        {
+            selectedObjectViewer.selectObject(this);
+        }
     }
 }

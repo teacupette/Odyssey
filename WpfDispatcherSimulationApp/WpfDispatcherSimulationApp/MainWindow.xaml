@@ -24,7 +24,6 @@
                 <RowDefinition Height="130" MinHeight="70"/>
             </Grid.RowDefinitions>
             <Rectangle Grid.Row="0" Fill="Gray"/>
-            <Button Grid.Row="1" Content="Scale Map" Click="ScaleMap_Click"/>
             <GridSplitter HorizontalAlignment="Stretch" Grid.Row="2" Background="#FF5D4545" Foreground="#FF5A4242"/>
 
 
@@ -50,15 +49,18 @@
             <Grid.RowDefinitions>
                 <RowDefinition/>
                 <RowDefinition Height="5"/>
-                <RowDefinition Height="150"/>
+                <RowDefinition Height="170"/>
             </Grid.RowDefinitions>
 
 
             <!-- Map -->
             <UserControls:Map x:Name="mapDisplay"/>
+            <Button Content="Scale Map" Click="ScaleMap_Click" Width="60" Height="20" HorizontalAlignment="Right" VerticalAlignment="Bottom"/>
+
 
             <!-- Selected Item Information -->
             <Rectangle Grid.Row="1" Fill="Gray"/>
+            <UserControls:SelectedObjectView x:Name="objectView" Grid.Row="2"/>
             <Grid Grid.Row="2">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition/>

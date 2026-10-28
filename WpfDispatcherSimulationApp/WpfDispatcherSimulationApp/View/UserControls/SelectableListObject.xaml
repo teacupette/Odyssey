@@ -18,7 +18,7 @@
             </Grid.ColumnDefinitions>
             <Image Grid.Column="0" x:Name="icon" Source="/Assets/fire_truck_icon.png" RenderOptions.BitmapScalingMode="NearestNeighbor" Width="30" Height="30" Margin="5, 0, 5, 0"/>
             <TextBlock Grid.Column="1" x:Name="unitname" Text="Unit1" FontSize="20" Foreground="Gray" VerticalAlignment="Center" Margin="5, 0, 0, 0"/>
-            <Button  Grid.Column="2" x:Name="clearButton" HorizontalAlignment="Right" Content="Select" FontSize="20" Background="Transparent" Foreground="LightGray" BorderThickness="0"/>
+            <Button  Grid.Column="2" x:Name="clearButton" Click="selectObjectButton_Click" HorizontalAlignment="Right" Content="Select" FontSize="20" Background="Transparent" Foreground="LightGray" BorderThickness="0"/>
 
         </Grid>
         

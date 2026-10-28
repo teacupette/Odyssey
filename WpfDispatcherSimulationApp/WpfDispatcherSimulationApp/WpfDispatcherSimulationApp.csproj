@@ -16,6 +16,7 @@
     <None Remove="Assets\fire_truck_icon.png" />
     <None Remove="Assets\grass_tile.png" />
     <None Remove="Assets\hospital.png" />
+    <None Remove="Assets\NonselectedObject.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -38,6 +39,9 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Assets\hospital.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\NonselectedObject.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
   </ItemGroup>
