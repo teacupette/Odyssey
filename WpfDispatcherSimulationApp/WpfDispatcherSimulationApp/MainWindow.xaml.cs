@@ -8,6 +8,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WpfDispatcherSimulationApp.View.UserControls;
 
 namespace WpfDispatcherSimulationApp
 {
@@ -20,24 +21,26 @@ namespace WpfDispatcherSimulationApp
         {
             InitializeComponent();
 
-            IncidentList.addNewObject("Incident 1", "fire_icon.png", objectView);
-            IncidentList.addNewObject("Incident 2", "fire_icon.png", objectView);
-            IncidentList.addNewObject("Incident 3", "fire_icon.png", objectView);
-            IncidentList.addNewObject("Incident 4", "fire_icon.png", objectView);
+            SelectableListObject.setSelectedObjectViewer(objectView);
 
-            StationList.addNewObject("Fire Station 1", "fire_station.png", objectView);
-            StationList.addNewObject("Fire Station 2", "fire_station.png", objectView);
-            StationList.addNewObject("Hospital 1", "hospital.png", objectView);
+            IncidentList.addNewObject(new SelectableListObject("Incident 1", "fire_icon.png"));
+            IncidentList.addNewObject(new SelectableListObject("Incident 2", "fire_icon.png"));
+            IncidentList.addNewObject(new SelectableListObject("Incident 3", "fire_icon.png"));
+            IncidentList.addNewObject(new SelectableListObject("Incident 4", "fire_icon.png"));
 
-            UnitList.addNewObject("FireTruck 1", "fire_truck_16x16.png", objectView);
-            UnitList.addNewObject("FireTruck 2", "fire_truck_16x16.png", objectView);
-            UnitList.addNewObject("FireTruck 3", "fire_truck_16x16.png", objectView);
-            UnitList.addNewObject("FireTruck 4", "fire_truck_16x16.png", objectView);
-            UnitList.addNewObject("FireTruck 5", "fire_truck_16x16.png", objectView);
-            UnitList.addNewObject("FireTruck 6", "fire_truck_16x16.png", objectView);
-            UnitList.addNewObject("Ambulance 1", "ambulance.png", objectView);
-            UnitList.addNewObject("Ambulance 2", "ambulance.png", objectView);
-            UnitList.addNewObject("Ambulance 3", "ambulance.png", objectView);
+            StationList.addNewObject(new SelectableListObject("Fire Station 1", "fire_station.png"));
+            StationList.addNewObject(new SelectableListObject("Fire Station 2", "fire_station.png"));
+            StationList.addNewObject(new SelectableListObject("Hospital 1", "hospital.png"));
+
+            UnitList.addNewObject(new SelectableListObject("FireTruck 1", "fire_truck_16x16.png"));
+            UnitList.addNewObject(new SelectableListObject("FireTruck 2", "fire_truck_16x16.png"));
+            UnitList.addNewObject(new SelectableListObject("FireTruck 3", "fire_truck_16x16.png"));
+            UnitList.addNewObject(new SelectableListObject("FireTruck 4", "fire_truck_16x16.png"));
+            UnitList.addNewObject(new SelectableListObject("FireTruck 5", "fire_truck_16x16.png"));
+            UnitList.addNewObject(new SelectableListObject("FireTruck 6", "fire_truck_16x16.png"));
+            UnitList.addNewObject(new SelectableListObject("Ambulance 1", "ambulance.png"));
+            UnitList.addNewObject(new SelectableListObject("Ambulance 2", "ambulance.png"));
+            UnitList.addNewObject(new SelectableListObject("Ambulance 3", "ambulance.png"));
 
         }
 

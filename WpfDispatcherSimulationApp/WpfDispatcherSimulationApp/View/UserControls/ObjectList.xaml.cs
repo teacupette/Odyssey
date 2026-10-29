@@ -27,9 +27,9 @@ namespace WpfDispatcherSimulationApp.View.UserControls
         public string ObjectListHedder { get; set; } = "!Missing Hedder!";  
 
 
-        public void addNewObject(string newUnitName, string iconPath, SelectedObjectView selectedObjectViewer)
+        public void addNewObject(SelectableListObject selectableListObject)
         {
-            Stackpanel_list.Children.Add(new SelectableListObject(newUnitName, iconPath, selectedObjectViewer));
+            Stackpanel_list.Children.Add(selectableListObject);
         }
     }
 }

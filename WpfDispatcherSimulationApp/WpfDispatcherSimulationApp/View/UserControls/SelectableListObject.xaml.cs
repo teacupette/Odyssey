@@ -18,18 +18,20 @@ namespace WpfDispatcherSimulationApp.View.UserControls
     /// </summary>
     public partial class SelectableListObject : UserControl
     {
-        private SelectedObjectView selectedObjectViewer;
-        public SelectableListObject(string name, string iconPath, SelectedObjectView selectedObjectView)
+        private static SelectedObjectView? selectedObjectViewer;
+
+        public SelectableListObject(string name, string iconPath)
         {
             InitializeComponent();
-
-            this.selectedObjectViewer = selectedObjectView;
             unitname.Text = name;
             changeIcon(iconPath);
         }
 
 
-
+        public static void setSelectedObjectViewer(SelectedObjectView selectedObjectView)
+        {
+            selectedObjectViewer = selectedObjectView;
+        }
 
         //Made with AI (Because I had a lot of problems with Loading Assets and Paths)
         public void changeIcon(string iconPath)
@@ -49,6 +51,11 @@ namespace WpfDispatcherSimulationApp.View.UserControls
 
         private void selectObjectButton_Click(object sender, RoutedEventArgs e)
         {
+            if (selectedObjectViewer == null)
+            {
+                throw new Exception("SelectedObjectViewer is not set. Please set it before using this method.");
+            }
+
             selectedObjectViewer.selectObject(this);
         }
     }
