@@ -1,9 +1,9 @@
-//First testing for dispathcer class
+//First testing for dispatcher class
 
 //using which other files
 
 //creating instance
-Dispatcher dispatchertest1 = new Dispatcher(1, "Dispathcer 1");
+Dispatcher dispatchertest1 = new Dispatcher(1, "Dispatcher 1");
 Console.WriteLine(dispatchertest1.name);
 Console.WriteLine(dispatchertest1.id);
 
@@ -14,8 +14,9 @@ Console.WriteLine(dispatchertest1.id);
 
 public class Dispatcher
 {
-    public int maxIncidentsAtOnce = 10; //max incidents at once, could be changed to a variable that is set in the constructor
-    private string[] incidents = new Incident[maxIncidentsAtOnce]; //array for all the incidents; new variable for max incidents 
+    //public int maxIncidentsAtOnce = 10; // NOT NEEDED ANYMORE BECAUSE OF STRING LIST//max incidents at once, could be changed to a variable that is set in the constructor
+    //private string[] incidents = new Incident[maxIncidentsAtOnce]; //NOT NEEDED ANYMORE BECAUSE OF STRING LIST 
+    private List<Incident> incidents = new List<Incident>(); //array for all the incidents; new variable for max incidents 
     //at once which could originate in the incident class itself
     private int id{get; set;}
     private string name{get; set;}
@@ -28,32 +29,37 @@ public class Dispatcher
 
     public void RegisterNewIncident(Incident incident)
     {
-        incidents[0] = incident; //this is just a test, will have to be changed to a more dynamic way of adding incidents
+        incidents.Add(incident); //this is just a test, will have to be changed to a more dynamic way of adding incidents
     }
 
-    public void ViewIncident() //this should have an input something like selectedIncident or something
+    public void ViewIncident() //this should have an input something like selectedIncident or something; future
     {
         
     }
 
     public void SelectIncident(Incident incident)
     {
-        
+        this.selectedIncident = incident;
     }
 
-    public void UpdateIncident() //this should have an input and/or be repetetive? Incident status
+    public void UpdateIncidentStatus(IncidentPriority priority) 
     {
-        
+        this.selectedIncident.priority = priority;
     }
 
-    public void AssignPriorityLevels()
+    public void UpdatePriorityLevel(IncidentPriority priority) 
     {
-        incident.priority = IncidentPriority;
+        this.selectedIncident.priority = priority;
+    }
+
+    public void AssignPriorityLevels(Incident incident, IncidentPriority priority)
+    {
+        incident.priority = priority;
     }
 
     public void AllocateUnits(EmergencyUnit unit) //have to work on the algorithm to check the allocated units
     {
-        incident.unitAssignement[0] = unit; 
+        this.selectedIncident.unitAssignement[0] = unit; 
     }
 
 }
