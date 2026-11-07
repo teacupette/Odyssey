@@ -4,7 +4,7 @@ class Station : MapObject
     private StationType type;
     private int capacity;
 
-    public Station(EmergencyUnit[] assignedUnits, StationType type, int capacity, (int, int) position) : base(position)
+    public Station(List<EmergencyUnit> assignedUnits, StationType type, int capacity, (int, int) position) : base(position)
     {
         this.assignedUnits = assignedUnits;
         this.type = type;
