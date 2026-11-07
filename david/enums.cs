@@ -1,8 +1,11 @@
-enum StationType
+
+
+enum AvailabilityStatus
 {
-    FireStation,
-    PoliceStation,
-    Hospital
+    Available,
+    OnRoute,
+    OnScene,
+    Returning
 }
 enum EmergencyUnitType
 {
@@ -12,24 +15,19 @@ enum EmergencyUnitType
     PoliceCar,
     Ambulance
 }
-enum AvailabilityStatus
-{
-    Available,
-    OnRoute,
-    OnScene,
-    Returning
-}
-enum IncidentStatus
-{
-    Incoming,
-    Active,
-    Completed
-}
 enum IncidentPriority{
     Low,
     Medium,
     High
 }
+enum IncidentStatus
+
+{
+    Incoming,
+    Active,
+    Completed
+}
+
 enum IncidentType
 {
     Fire,
@@ -38,4 +36,10 @@ enum IncidentType
     FireTraffic,
     FireLadder
 
+}
+enum StationType
+{
+    FireStation,
+    PoliceStation,
+    Hospital
 }
