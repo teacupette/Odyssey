@@ -57,7 +57,7 @@ class Dispatcher
 
     public void AllocateUnits(EmergencyUnit unit) //have to work on the algorithm to check the allocated units
     {
-        this.selectedIncident.unitAssignement[0] = unit; 
+        unit.setAssignedIncident(this.selectedIncident);
     }
 
 }
