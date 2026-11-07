@@ -3,16 +3,13 @@
 //using which other files
 
 //creating instance
-Dispatcher dispatchertest1 = new Dispatcher(1, "Dispatcher 1");
-Console.WriteLine(dispatchertest1.name);
-Console.WriteLine(dispatchertest1.id);
 
 //Dispatcher class
 //Wouldn't there have to be an array to store all the incdients that are registered?
 //Also i cant't really do much much i think because there is not a lot to base the class off of
 
 
-public class Dispatcher
+class Dispatcher
 {
     //public int maxIncidentsAtOnce = 10; // NOT NEEDED ANYMORE BECAUSE OF STRING LIST//max incidents at once, could be changed to a variable that is set in the constructor
     //private string[] incidents = new Incident[maxIncidentsAtOnce]; //NOT NEEDED ANYMORE BECAUSE OF STRING LIST 
@@ -21,7 +18,7 @@ public class Dispatcher
     private int id{get; set;}
     private string name{get; set;}
     private Incident selectedIncident;
-    Dispatcher(int id, string name)
+    public Dispatcher(int id, string name)
     {
         this.id = id;
         this.name = name;
@@ -42,19 +39,20 @@ public class Dispatcher
         this.selectedIncident = incident;
     }
 
-    public void UpdateIncidentStatus(IncidentPriority priority) 
+    public void UpdateIncidentStatus(IncidentStatus status) 
     {
-        this.selectedIncident.priority = priority;
+        this.selectedIncident.updateStatus(status);
     }
 
     public void UpdatePriorityLevel(IncidentPriority priority) 
     {
-        this.selectedIncident.priority = priority;
+        this.selectedIncident.updatePriority(priority);
+
     }
 
     public void AssignPriorityLevels(Incident incident, IncidentPriority priority)
     {
-        incident.priority = priority;
+        incident.updatePriority(priority);
     }
 
     public void AllocateUnits(EmergencyUnit unit) //have to work on the algorithm to check the allocated units
