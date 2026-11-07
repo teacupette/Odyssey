@@ -9,8 +9,6 @@ class Station : MapObject
         this.assignedUnits = assignedUnits;
         this.type = type;
         this.capacity = capacity;
-
-
     }
     public EmergencyUnit[] getUnits()
     {
