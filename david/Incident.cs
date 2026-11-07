@@ -1,4 +1,4 @@
-class Incident
+class Incident : MapObject
 {
     private IncidentType type{get; set;}
     private IncidentStatus status{get; set;}
@@ -6,12 +6,13 @@ class Incident
     private List<EmergencyUnit> unitAssignement = new List<EmergencyUnit>();
     private string description{get; set;} = "";
 
-    public Incident(IncidentType type, IncidentStatus status, IncidentPriority priority, string description)
+    public Incident(IncidentType type, IncidentStatus status, IncidentPriority priority, string description, (int, int) position): base(position)
     {
         this.type = type;
         this.status = status;
         this.priority = priority;
         this.description = description;
+
     }
 
     public void updateStatus(IncidentStatus status)
