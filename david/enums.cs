@@ -34,5 +34,8 @@ enum IncidentType
 {
     Fire,
     Police,
-    Medical
+    Medical,
+    FireTraffic,
+    FireLadder
+
 }
