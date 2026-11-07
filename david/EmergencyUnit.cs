@@ -1,26 +1,37 @@
-using System;
-
-namespace david;
-
-public class EmergencyUnit
+class EmergencyUnit
 {
 
-    EmergencyUnitType type = new EmergencyUnitType();
+    private EmergencyUnitType type;
 
-    StationType homeStation = new StationType();
+    private StationType homeStation;
 
-    AvailabilityStatus status = new AvailabilityStatus();
+    private AvailabilityStatus status;
 
-    Incident AssignedIncident = new Incident();
+    private Incident AssignedIncident;
 
     //methods to be implemented
+    public EmergencyUnit(EmergencyUnitType type, StationType homeStation, AvailabilityStatus status)
+    {
+        this.type = type;
+        this.homeStation = homeStation;
+        this.status = status;
+    }
 
-    public Incident getAssignedIncident();
+    public Incident getAssignedIncident()
+    {
+        return AssignedIncident;
+    }
 
-    public AvailabilityStatus GetStatus();
+    public AvailabilityStatus GetStatus()
+    {
+        return status;
+    }
 
 
-    public void setAssignedUnit();
+    public void setAssignedIncident(Incident incident)
+    {
+        this.AssignedIncident = incident;
+    }
 
 
 
