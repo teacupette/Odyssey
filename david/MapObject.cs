@@ -12,7 +12,7 @@ public class MapObject
 
     }
 
-    public int getCount()
+    public static int getCount()
     {
         return count;
     }
