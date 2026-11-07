@@ -1,9 +1,9 @@
 class Station
 {
-    private EmergencyUnit[] assignedUnits;
+    private List<EmergencyUnit> assignedUnits= new List<EmergencyUnit>(); 
     private StationType type;
     private int capacity;
-    public EmergencyUnit getUnits()
+    public List<EmergencyUnit> getUnits()
     {
         return assignedUnits;
     }

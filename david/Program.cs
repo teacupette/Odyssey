@@ -1,1 +1,6 @@
-﻿Dispatcher dispatchertest1 = new Dispatcher(1, "Dispatcher 1");
+﻿Console.WriteLine("Hello");
+string line;
+while((line = Console.ReadLine()) != "stop")
+{
+    Console.WriteLine("Starting");
+}
