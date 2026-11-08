@@ -6,11 +6,11 @@ class EmergencyUnit : MapObject
     [JsonInclude] private int unitId;
     [JsonInclude] private EmergencyUnitType type;
 
-    [JsonInclude] private Station homeStation;
+    private Station? homeStation; //[JsonInclude]
 
     [JsonInclude] private AvailabilityStatus status;
 
-    [JsonInclude] private Incident? AssignedIncident;
+    private Incident? AssignedIncident; //[JsonInclude] 
 
     //methods to be implemented
     public EmergencyUnit(EmergencyUnitType type, Station homeStation, AvailabilityStatus status, int[] position) : base(position)

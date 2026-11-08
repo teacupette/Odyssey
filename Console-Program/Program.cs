@@ -7,9 +7,20 @@ Station station2 = new Station(new List<int>{}, StationType.PoliceStation, 5, ne
 station.addUnit(new EmergencyUnit(EmergencyUnitType.Firetruck, station2, AvailabilityStatus.Available, new int[] { 1, 1 }));
 station.addUnit(new EmergencyUnit(EmergencyUnitType.Firetruck, station2, AvailabilityStatus.Available, new int[] { 123, 3 }));
 
+Map map = new Map();
+map.LoadMapObject(station);
+map.LoadMapObject(station2);
+map.LoadMapObject(new EmergencyUnit(EmergencyUnitType.Ambulance, station, AvailabilityStatus.Available, new int[] { 5, 5 }));
+map.LoadMapObject(new EmergencyUnit(EmergencyUnitType.Ambulance, station, AvailabilityStatus.Available, new int[] { 6, 6 }));
+map.LoadMapObject(new EmergencyUnit(EmergencyUnitType.Ambulance, station, AvailabilityStatus.Available, new int[] { 7, 7 }));
+map.LoadMapObject(new Incident(IncidentType.Fire, IncidentStatus.Active, IncidentPriority.High, "Fire at 123 Main St", new int[] { 2, 2 }));
+map.LoadMapObject(new Incident(IncidentType.Medical, IncidentStatus.Active, IncidentPriority.Medium, "Medical emergency at 456 Elm St", new int[] { 3, 3 }));
+map.LoadMapObject(new Incident(IncidentType.Police, IncidentStatus.Active, IncidentPriority.Low, "Burglary at 789 Oak St", new int[] { 4, 4 }));
 
-string JsonString = JsonSerializer.Serialize(station, new JsonSerializerOptions { WriteIndented = true });
+string JsonString = JsonSerializer.Serialize(map, new JsonSerializerOptions { WriteIndented = true });
 Console.WriteLine(JsonString);
+
+map.printMapObjects();
 
 
 
