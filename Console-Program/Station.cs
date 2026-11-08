@@ -1,17 +1,29 @@
+using System.Text.Json.Serialization;
 class Station : MapObject
 {
-    private List<EmergencyUnit> assignedUnits= new List<EmergencyUnit>(); 
-    private StationType type;
-    private int capacity;
+    [JsonInclude] private List<int> assignedUnits= new List<int>(); 
+    [JsonInclude] private StationType type;
+    [JsonInclude] private int capacity;
 
-    public Station(List<EmergencyUnit> assignedUnits, StationType type, int capacity, (int, int) position) : base(position)
+    public Station(List<int> assignedUnits, StationType type, int capacity, int[] position) : base(position)
     {
         this.assignedUnits = assignedUnits;
         this.type = type;
         this.capacity = capacity;
     }
-    public List<EmergencyUnit> getUnits()
+    public List<int> getUnits()
     {
         return assignedUnits;
+    }
+    public void addUnit(EmergencyUnit unit)
+    {
+        if (assignedUnits.Count < capacity)
+        {
+            assignedUnits.Add(unit.getId());
+        }
+        else
+        {
+            throw new Exception("Station is at full capacity.");
+        }
     }
 }

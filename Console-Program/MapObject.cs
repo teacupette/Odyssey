@@ -1,10 +1,11 @@
+using System.Text.Json.Serialization;
 public class MapObject
 {
-    (int, int) position;
+    [JsonInclude] private int[] position = new int[2];
 
     static int count = 0;
 
-    public MapObject((int, int) position)
+    public MapObject(int[] position)
     {
         count++;
 
@@ -17,7 +18,7 @@ public class MapObject
         return count;
     }
 
-    public (int, int) getPosition()
+    public int[] getPosition()
     {
         return position;
     }

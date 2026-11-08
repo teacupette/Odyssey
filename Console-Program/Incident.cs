@@ -1,12 +1,13 @@
+using System.Text.Json.Serialization;
 class Incident : MapObject
 {
-    private IncidentType type{get; set;}
-    private IncidentStatus status{get; set;}
-    private IncidentPriority priority{get; set;}
-    private List<EmergencyUnit> unitAssignement = new List<EmergencyUnit>();
-    private string description{get; set;} = "";
+    [JsonInclude] private IncidentType type{get; set;}
+    [JsonInclude] private IncidentStatus status{get; set;}
+    [JsonInclude] private IncidentPriority priority{get; set;}
+    [JsonInclude] private List<int> unitAssignement = new List<int>();
+    [JsonInclude] private string description{get; set;} = "";
 
-    public Incident(IncidentType type, IncidentStatus status, IncidentPriority priority, string description, (int, int) position): base(position)
+    public Incident(IncidentType type, IncidentStatus status, IncidentPriority priority, string description, int[] position): base(position)
     {
         this.type = type;
         this.status = status;
