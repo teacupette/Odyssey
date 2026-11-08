@@ -8,9 +8,7 @@ public class MapObject
     public MapObject(int[] position)
     {
         count++;
-
         this.position = position;
-
     }
 
     public static int getCount()

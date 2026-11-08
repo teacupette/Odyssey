@@ -1,63 +1,51 @@
 using System.Text.Json.Serialization;
 class EmergencyUnit : MapObject, IgetId
 {
-    private static int idCounter = 0;
-    private static List<EmergencyUnit> allUnits = new List<EmergencyUnit>();
+    private static int unitIdCounter = 0;
     [JsonInclude] private int unitId;
     [JsonInclude] private EmergencyUnitType type;
+    [JsonInclude] private AvailabilityStatus availability;
+    [JsonInclude] private int? homeStationId; 
+    [JsonInclude] private int? assignedIncidentId; 
 
-    [JsonInclude] private int? homeStationId; //[JsonInclude]
-
-    [JsonInclude] private AvailabilityStatus status;
-
-    [JsonInclude] private int? AssignedIncidentId; //[JsonInclude] 
-
-    //methods to be implemented
     public EmergencyUnit(EmergencyUnitType type, AvailabilityStatus status, int[] position, int? homeStation = null) : base(position)
     {
-        this.unitId = idCounter++;
+        this.unitId = unitIdCounter++;
         this.type = type;
         this.homeStationId = homeStation;
-        this.status = status;
-        allUnits.Add(this);
+        this.availability = status;
     }
-/*
-    public Incident getAssignedIncident()
+
+    public int getAssignedIncident()
     {
-        if (AssignedIncident == null)
+        if (assignedIncidentId == null)
         {
             throw new Exception("No incident assigned to this unit.");
         }
         
-        return AssignedIncident;
-    }*/
-
-    public AvailabilityStatus GetStatus()
-    {
-        return status;
+        return assignedIncidentId.Value;
     }
-/*
+
+    public AvailabilityStatus getAvailability()
+    {
+        return availability;
+    }
+
     public void setAssignedIncident(Incident incident)
     {
-        this.AssignedIncident = incident;
+        assignedIncidentId = incident.getId();
     }
 
-*/
+    public void setAvailability(AvailabilityStatus newAvailiblitySatus)
+    {
+        availability = newAvailiblitySatus;
+    }
+
+
 
     //id rework stuff
     public int getId()
     {
         return unitId;
-    }
-    public static EmergencyUnit getUnitById(int id)
-    {
-        foreach (EmergencyUnit unit in allUnits)
-        {
-            if (unit.getId() == id)
-            {
-                return unit;
-            }
-        }
-        throw new Exception("No unit found with the given ID.");
     }
 }

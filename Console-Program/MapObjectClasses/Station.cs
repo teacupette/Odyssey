@@ -2,7 +2,7 @@ using System.Dynamic;
 using System.Text.Json.Serialization;
 class Station : MapObject, IgetId
 {
-    private static int stationCounter = 0;
+    private static int stationIdCounter = 0;
     [JsonInclude] private int stationId{get; set;}
     [JsonInclude] private List<int> assignedUnits= new List<int>(); 
     [JsonInclude] private StationType type;
@@ -10,7 +10,7 @@ class Station : MapObject, IgetId
 
     public Station(List<int> assignedUnits, StationType type, int capacity, int[] position) : base(position)
     {
-        this.stationId = stationCounter++;
+        this.stationId = stationIdCounter++;
         this.assignedUnits = assignedUnits;
         this.type = type;
         this.capacity = capacity;

@@ -1,12 +1,13 @@
 using System.Text.Json.Serialization;
 class Incident : MapObject, IgetId
 {
-    [JsonInclude] private int id{get; set;}
+    private static int incidentIdCounter = 0;
+    [JsonInclude] private int incidentId{get; set;}
     [JsonInclude] private IncidentType type{get; set;}
     [JsonInclude] private IncidentStatus status{get; set;}
     [JsonInclude] private IncidentPriority priority{get; set;}
-    [JsonInclude] private List<int> unitAssignement = new List<int>();
     [JsonInclude] private string description{get; set;} = "";
+    [JsonInclude] private List<int> assignedUnitIds = new List<int>();
 
     public Incident(IncidentType type, IncidentStatus status, IncidentPriority priority, string description, int[] position): base(position)
     {
@@ -27,13 +28,13 @@ class Incident : MapObject, IgetId
         this.priority = priority;
     }
 
-    public string getInformation()
+    public string getDescripion()
     {
         return description; //this is just temporary
     }
 
     public int getId()
     {
-        return id;
+        return incidentId;
     }
 }

@@ -49,15 +49,15 @@ class DispatcherSimulation
         {
             case "Incident":
                 Incident incident = JsonSerializer.Deserialize<Incident>(path)!;
-                map.LoadMapObject(incident);
+                map.loadMapObject(incident);
                 break;
             case "Station":
                 Station station = JsonSerializer.Deserialize<Station>(path)!;
-                map.LoadMapObject(station);
+                map.loadMapObject(station);
                 break;
             case "EmergencyUnit":
                 EmergencyUnit unit = JsonSerializer.Deserialize<EmergencyUnit>(path)!;
-                map.LoadMapObject(unit);
+                map.loadMapObject(unit);
                 break;
             default:
                 throw new ArgumentException($"Invalid object type: {objectType}. Must be 'Incident', 'Station', or 'EmergencyUnit'.");
