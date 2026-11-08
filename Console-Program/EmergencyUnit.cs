@@ -1,6 +1,5 @@
 class EmergencyUnit : MapObject
 {
-
     private EmergencyUnitType type;
 
     private StationType homeStation;
@@ -37,13 +36,4 @@ class EmergencyUnit : MapObject
     {
         this.AssignedIncident = incident;
     }
-
-
-
-
-
-
-
-
-
 }
