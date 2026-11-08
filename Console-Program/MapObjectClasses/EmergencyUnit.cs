@@ -1,27 +1,27 @@
 using System.Text.Json.Serialization;
-class EmergencyUnit : MapObject
+class EmergencyUnit : MapObject, IgetId
 {
     private static int idCounter = 0;
     private static List<EmergencyUnit> allUnits = new List<EmergencyUnit>();
     [JsonInclude] private int unitId;
     [JsonInclude] private EmergencyUnitType type;
 
-    private Station? homeStation; //[JsonInclude]
+    [JsonInclude] private int? homeStationId; //[JsonInclude]
 
     [JsonInclude] private AvailabilityStatus status;
 
-    private Incident? AssignedIncident; //[JsonInclude] 
+    [JsonInclude] private int? AssignedIncidentId; //[JsonInclude] 
 
     //methods to be implemented
-    public EmergencyUnit(EmergencyUnitType type, Station homeStation, AvailabilityStatus status, int[] position) : base(position)
+    public EmergencyUnit(EmergencyUnitType type, AvailabilityStatus status, int[] position, int? homeStation = null) : base(position)
     {
         this.unitId = idCounter++;
         this.type = type;
-        this.homeStation = homeStation;
+        this.homeStationId = homeStation;
         this.status = status;
         allUnits.Add(this);
     }
-
+/*
     public Incident getAssignedIncident()
     {
         if (AssignedIncident == null)
@@ -30,19 +30,19 @@ class EmergencyUnit : MapObject
         }
         
         return AssignedIncident;
-    }
+    }*/
 
     public AvailabilityStatus GetStatus()
     {
         return status;
     }
-
+/*
     public void setAssignedIncident(Incident incident)
     {
         this.AssignedIncident = incident;
     }
 
-
+*/
 
     //id rework stuff
     public int getId()

@@ -1,0 +1,4 @@
+interface IgetId
+{
+    int getId();
+}

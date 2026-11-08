@@ -1,12 +1,16 @@
+using System.Dynamic;
 using System.Text.Json.Serialization;
-class Station : MapObject
+class Station : MapObject, IgetId
 {
+    private static int stationCounter = 0;
+    [JsonInclude] private int stationId{get; set;}
     [JsonInclude] private List<int> assignedUnits= new List<int>(); 
     [JsonInclude] private StationType type;
     [JsonInclude] private int capacity;
 
     public Station(List<int> assignedUnits, StationType type, int capacity, int[] position) : base(position)
     {
+        this.stationId = stationCounter++;
         this.assignedUnits = assignedUnits;
         this.type = type;
         this.capacity = capacity;
@@ -25,5 +29,10 @@ class Station : MapObject
         {
             throw new Exception("Station is at full capacity.");
         }
+    }
+
+    public int getId()
+    {
+        return stationId;
     }
 }

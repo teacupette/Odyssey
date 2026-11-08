@@ -63,7 +63,7 @@ class Dispatcher
         incident.updatePriority(priority);
     }
 
-    public void AllocateUnits(EmergencyUnit unit) //have to work on the algorithm to check the allocated units
+   /* public void AllocateUnits(EmergencyUnit unit) //have to work on the algorithm to check the allocated units
     {
         if (this.selectedIncident == null)
         {
@@ -71,5 +71,5 @@ class Dispatcher
         }
 
         unit.setAssignedIncident(this.selectedIncident);
-    }
+    }*/
 }

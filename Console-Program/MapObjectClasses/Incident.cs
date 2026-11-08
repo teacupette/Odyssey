@@ -1,6 +1,7 @@
 using System.Text.Json.Serialization;
-class Incident : MapObject
+class Incident : MapObject, IgetId
 {
+    [JsonInclude] private int id{get; set;}
     [JsonInclude] private IncidentType type{get; set;}
     [JsonInclude] private IncidentStatus status{get; set;}
     [JsonInclude] private IncidentPriority priority{get; set;}
@@ -29,5 +30,10 @@ class Incident : MapObject
     public string getInformation()
     {
         return description; //this is just temporary
+    }
+
+    public int getId()
+    {
+        return id;
     }
 }

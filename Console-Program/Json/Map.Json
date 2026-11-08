@@ -1,0 +1,97 @@
+{
+  "LoadedIncidents": [
+    {
+      "type": 0,
+      "status": 1,
+      "priority": 2,
+      "description": "Fire at 123 Main St",
+      "unitAssignement": [],
+      "position": [
+        2,
+        2
+      ]
+    },
+    {
+      "type": 2,
+      "status": 1,
+      "priority": 1,
+      "description": "Medical emergency at 456 Elm St",
+      "unitAssignement": [],
+      "position": [
+        3,
+        3
+      ]
+    },
+    {
+      "type": 1,
+      "status": 1,
+      "priority": 0,
+      "description": "Burglary at 789 Oak St",
+      "unitAssignement": [],
+      "position": [
+        4,
+        4
+      ]
+    }
+  ],
+  "LoadedUnits": [
+    {
+      "unitId": 2,
+      "type": 4,
+      "homeStation": 0,
+      "status": 0,
+      "AssignedIncident": null,
+      "position": [
+        5,
+        5
+      ]
+    },
+    {
+      "unitId": 3,
+      "type": 4,
+      "homeStation": 0,
+      "status": 0,
+      "AssignedIncident": null,
+      "position": [
+        6,
+        6
+      ]
+    },
+    {
+      "unitId": 4,
+      "type": 4,
+      "homeStation": 1,
+      "status": 0,
+      "AssignedIncident": null,
+      "position": [
+        7,
+        7
+      ]
+    }
+  ],
+  "LoadedStations": [
+    {
+      "stationId": 0,
+      "assignedUnits": [
+        0,
+        1
+      ],
+      "type": 0,
+      "capacity": 10,
+      "position": [
+        0,
+        0
+      ]
+    },
+    {
+      "stationId": 1,
+      "assignedUnits": [],
+      "type": 1,
+      "capacity": 5,
+      "position": [
+        10,
+        10
+      ]
+    }
+  ]
+}
