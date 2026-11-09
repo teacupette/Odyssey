@@ -17,7 +17,7 @@ class Dispatcher
     //at once which could originate in the incident class itself
     private int id{get; set;}
     private string name{get; set;}
-    private Incident selectedIncident;
+    private Incident? selectedIncident;
     public Dispatcher(int id, string name)
     {
         this.id = id;
@@ -41,11 +41,19 @@ class Dispatcher
 
     public void UpdateIncidentStatus(IncidentStatus status) 
     {
+        if (this.selectedIncident == null)
+        {
+            throw new Exception("No incident selected.");
+        }
         this.selectedIncident.updateStatus(status);
     }
 
     public void UpdatePriorityLevel(IncidentPriority priority) 
     {
+        if (this.selectedIncident == null)
+        {
+            throw new Exception("No incident selected.");
+        }
         this.selectedIncident.updatePriority(priority);
 
     }
@@ -57,7 +65,11 @@ class Dispatcher
 
     public void AllocateUnits(EmergencyUnit unit) //have to work on the algorithm to check the allocated units
     {
+        if (this.selectedIncident == null)
+        {
+            throw new Exception("No incident selected.");
+        }
+
         unit.setAssignedIncident(this.selectedIncident);
     }
-
 }

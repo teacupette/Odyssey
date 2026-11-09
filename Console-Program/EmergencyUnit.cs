@@ -1,13 +1,12 @@
 class EmergencyUnit : MapObject
 {
-
     private EmergencyUnitType type;
 
     private StationType homeStation;
 
     private AvailabilityStatus status;
 
-    private Incident AssignedIncident;
+    private Incident? AssignedIncident;
 
     //methods to be implemented
     public EmergencyUnit(EmergencyUnitType type, StationType homeStation, AvailabilityStatus status, (int, int) position) : base(position)
@@ -19,6 +18,11 @@ class EmergencyUnit : MapObject
 
     public Incident getAssignedIncident()
     {
+        if (AssignedIncident == null)
+        {
+            throw new Exception("No incident assigned to this unit.");
+        }
+        
         return AssignedIncident;
     }
 
@@ -32,13 +36,4 @@ class EmergencyUnit : MapObject
     {
         this.AssignedIncident = incident;
     }
-
-
-
-
-
-
-
-
-
 }

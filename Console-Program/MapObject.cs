@@ -21,13 +21,4 @@ public class MapObject
     {
         return position;
     }
-    
-
-
-
-
-
-
-
-
 }
