@@ -2,14 +2,14 @@ class EmergencyUnit : MapObject
 {
     private EmergencyUnitType type;
 
-    private StationType homeStation;
+    private Station homeStation;
 
     private AvailabilityStatus status;
 
     private Incident? AssignedIncident;
 
     //methods to be implemented
-    public EmergencyUnit(EmergencyUnitType type, StationType homeStation, AvailabilityStatus status, (int, int) position) : base(position)
+    public EmergencyUnit(EmergencyUnitType type, Station homeStation, AvailabilityStatus status, (int, int) position) : base(position)
     {
         this.type = type;
         this.homeStation = homeStation;
