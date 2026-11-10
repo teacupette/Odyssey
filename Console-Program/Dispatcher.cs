@@ -1,8 +1,4 @@
-//First testing for dispatcher class
 
-//using which other files
-
-//creating instance
 
 //Dispatcher class
 //Wouldn't there have to be an array to store all the incdients that are registered?
