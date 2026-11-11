@@ -1,6 +1,6 @@
 public class MapObject
 {
-    (int, int) position;
+    (int, int) position; //Just 2D
 
     static int count = 0;
 

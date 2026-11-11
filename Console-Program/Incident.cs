@@ -4,7 +4,7 @@ class Incident : MapObject
     private IncidentStatus status{get; set;}
     private IncidentPriority priority{get; set;}
     private List<EmergencyUnit> unitAssignement = new List<EmergencyUnit>();
-    private string description{get; set;} = "";
+    private string description{get; set;} = String.Empty;
 
     public Incident(IncidentType type, IncidentStatus status, IncidentPriority priority, string description, (int, int) position): base(position)
     {
