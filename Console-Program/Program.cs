@@ -3,7 +3,10 @@ Console.WriteLine("\nStart? PRESS ENTER TO START");
 string line;
 
 
-//Dispatcher dispatcher = new Dispatcher(1, "Test");
+Dispatcher dispatcher = new Dispatcher(1, "Test");
+Station station1 = new Station(assignedUnits:policecar1, StationType.PoliceStation, 3, (0,0));
+EmergencyUnit policecar1 = new EmergencyUnit(EmergencyUnitType.PoliceCar, StationType.PoliceStation, AvailabilityStatus.Available,(0,0));
+Incident incident1 = new Incident(IncidentType.Police, IncidentStatus.Active, IncidentPriority.Low, description:"",(1,0) );
 /*
 while((line = Console.ReadLine()) != "stop")
 {
@@ -15,4 +18,7 @@ while((line = Console.ReadLine()) != "stop")
     
 } */
 
-Dispatcher dispatcher = new Dispatcher(1,"Test");
+
+
+//Console.WriteLine("Test");
+

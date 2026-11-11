@@ -11,7 +11,7 @@ class Dispatcher
     //private string[] incidents = new Incident[maxIncidentsAtOnce]; //NOT NEEDED ANYMORE BECAUSE OF STRING LIST 
     private List<Incident> incidents = new List<Incident>(); //array for all the incidents; new variable for max incidents 
     //at once which could originate in the incident class itself
-    private int id{get; set;}
+    public int id{get; set;}
     private string name{get; set;}
     private Incident? selectedIncident;
     public Dispatcher(int id, string name)
