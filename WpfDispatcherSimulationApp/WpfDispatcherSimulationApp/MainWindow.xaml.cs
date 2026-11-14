@@ -8,46 +8,48 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WpfDispatcherSimulationApp.View;
 using WpfDispatcherSimulationApp.View.UserControls;
 
 namespace WpfDispatcherSimulationApp
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
+    public enum Screen
+    {
+        MainScreen,
+        StartScreen
+    }
     public partial class MainWindow : Window
     {
         public MainWindow()
         {
             InitializeComponent();
-
-            SelectableListObject.setSelectedObjectViewer(objectView);
-
-            IncidentList.addNewObject(new SelectableListObject("Incident 1", "fire_icon.png"));
-            IncidentList.addNewObject(new SelectableListObject("Incident 2", "fire_icon.png"));
-            IncidentList.addNewObject(new SelectableListObject("Incident 3", "fire_icon.png"));
-            IncidentList.addNewObject(new SelectableListObject("Incident 4", "fire_icon.png"));
-
-            StationList.addNewObject(new SelectableListObject("Fire Station 1", "fire_station.png"));
-            StationList.addNewObject(new SelectableListObject("Fire Station 2", "fire_station.png"));
-            StationList.addNewObject(new SelectableListObject("Hospital 1", "hospital.png"));
-
-            UnitList.addNewObject(new SelectableListObject("FireTruck 1", "fire_truck_16x16.png"));
-            UnitList.addNewObject(new SelectableListObject("FireTruck 2", "fire_truck_16x16.png"));
-            UnitList.addNewObject(new SelectableListObject("FireTruck 3", "fire_truck_16x16.png"));
-            UnitList.addNewObject(new SelectableListObject("FireTruck 4", "fire_truck_16x16.png"));
-            UnitList.addNewObject(new SelectableListObject("FireTruck 5", "fire_truck_16x16.png"));
-            UnitList.addNewObject(new SelectableListObject("FireTruck 6", "fire_truck_16x16.png"));
-            UnitList.addNewObject(new SelectableListObject("Ambulance 1", "ambulance.png"));
-            UnitList.addNewObject(new SelectableListObject("Ambulance 2", "ambulance.png"));
-            UnitList.addNewObject(new SelectableListObject("Ambulance 3", "ambulance.png"));
-
+            changeScreen(Screen.StartScreen);
         }
 
-        private void ScaleMap_Click(object sender, RoutedEventArgs e)
+        private void changeScreen(Screen nextScreen)
         {
+            startScreen.Visibility = Visibility.Hidden;
+            mainScreen.Visibility = Visibility.Hidden;
+            switch (nextScreen)
+            {
+                case Screen.MainScreen:
+                    mainScreen.Visibility = Visibility.Visible;
 
-            mapDisplay.ScaleMap();
+                    break;
+                
+                case Screen.StartScreen:
+                    startScreen.Visibility = Visibility.Visible;
+                    break;
+            }
+        }
+        private void startScreen_StartPressed(object sender, RoutedEventArgs e)
+        {
+            changeScreen(Screen.MainScreen);
+        }
+
+        private void mainScreen_ExitPressed(object sender, RoutedEventArgs e)
+        {
+            changeScreen(Screen.StartScreen);
         }
     }
 }
