@@ -40,15 +40,16 @@ while((line = Console.ReadLine()) != "stop")
             }
     }
     Console.WriteLine(incident1text);
-    while (inIncident==True)
+    bool inIncident = true;
+    while (inIncident==true)
     {
         Console.WriteLine("1.EmergencyType\n2.IncidentPriority\n3.Exit Incident\n4.Stop the program");
-        switch (Console.ReadLine)
+        switch (Console.ReadLine())
         {
         case "1":
             {
                 Console.WriteLine("Whats the Emergencytype?\n1.Police\n2.Fire\n3.Medical"); //This is the idea it dosn't work yet.
-                switch (Console.ReadLine)
+                switch (Console.ReadLine())
                 {
                     case"1":
                         {
@@ -65,6 +66,7 @@ while((line = Console.ReadLine()) != "stop")
                     case"3":
                         {
                             incident1.IncidentType.set(Medical);
+                            break;
                         }
                 }
                 break;
