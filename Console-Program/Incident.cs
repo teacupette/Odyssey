@@ -6,6 +6,12 @@ class Incident : MapObject
     private List<EmergencyUnit> unitAssignement = new List<EmergencyUnit>();
     private string description{get; set;} = "";
 
+    public string IncidentDescription // method because of private field
+    {
+        get { return description;}
+        set { description = value;}
+    }   
+
     public Incident(IncidentType type, IncidentStatus status, IncidentPriority priority, string description, (int, int) position): base(position)
     {
         this.type = type;
@@ -29,4 +35,11 @@ class Incident : MapObject
     {
         return description; //this is just temporary
     }
+
+    public IncidentType getIncidentType() //to check if the user inputs the correct incident type
+    {
+        return type;
+    }
+
+
 }

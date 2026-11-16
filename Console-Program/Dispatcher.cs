@@ -11,6 +11,11 @@ class Dispatcher
     //private string[] incidents = new Incident[maxIncidentsAtOnce]; //NOT NEEDED ANYMORE BECAUSE OF STRING LIST 
     private List<Incident> incidents = new List<Incident>(); //array for all the incidents; new variable for max incidents 
     //at once which could originate in the incident class itself
+    public List<Incident> showIncident  //here to show all incidents and their data
+    {
+        get {return incidents;}
+        set {incidents = value;}
+    }
     public int id{get; set;}
     private string name{get; set;}
     private Incident? selectedIncident;
@@ -25,7 +30,7 @@ class Dispatcher
         incidents.Add(incident); //this is just a test, will have to be changed to a more dynamic way of adding incidents
     }
 
-    public void ViewIncident() //this should have an input something like selectedIncident or something; future
+    public void ViewIncident() //this should have an input something like selectedIncident or something in the future but rn it should give back all information of the incident
     {
         
     }
