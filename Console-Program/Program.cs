@@ -4,7 +4,7 @@
 using System.Dynamic;
 using System.Net.NetworkInformation;
 
-Console.WriteLine("\nStart? PRESS ENTER TO START");
+Console.WriteLine("Start? PRESS ENTER TO START");
 string? line;
 
 
@@ -46,7 +46,7 @@ void GameLoop()
     {
         case"1":
             {
-                bool inIncident = true;
+                bool inIncident = true; 
                 while (inIncident==true)
                 {   
                     Console.WriteLine("1.EmergencyType\n2.IncidentPriority\n3.Add Description \n4.Exit Incident\n-----------------------\n|Write stop to stop the program|");
@@ -95,8 +95,9 @@ void GameLoop()
                         case "4":
                     {
                         //Exit Incident
-                        inIncident =false;
+                        inIncident = false;
                         break;
+                        
                     }
                         default:
                     {
