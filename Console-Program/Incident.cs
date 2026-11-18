@@ -41,5 +41,16 @@ class Incident : MapObject
         return type;
     }
 
+    public IncidentStatus getIncidentStatus()
+    {
+        return status;
+    }
+
+    public IncidentPriority GetIncidentPriority()
+    {
+        return priority;
+    }
+    
+
 
 }
