@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="Console-Program/Console-Program.csproj" />
+  <Project Path="Project.Core/Project.Core.csproj" />
+  <Project Path="Project.Data/Project.Data.csproj" />
+</Solution>

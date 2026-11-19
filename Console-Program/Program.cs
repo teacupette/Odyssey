@@ -1,4 +1,7 @@
-﻿//either the programm checks if something is correct or it just set the attributes with the values choosen by the player
+using Project.Core;
+
+
+//either the programm checks if something is correct or it just set the attributes with the values choosen by the player
 
 
 using System.Dynamic;

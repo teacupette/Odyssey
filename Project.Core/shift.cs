@@ -1,3 +1,5 @@
+namespace Project.Core;
+
 class Shift
 {
     private int shiftTime;

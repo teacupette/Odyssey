@@ -1,3 +1,4 @@
+namespace Project.Core;
 class Incident : MapObject
 {
     private IncidentType type{get; set;}
