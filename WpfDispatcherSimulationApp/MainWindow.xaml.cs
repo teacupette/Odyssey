@@ -1,5 +1,5 @@
 ﻿using System.Windows;
-
+using Project.Core;
 
 namespace WpfDispatcherSimulationApp
 {
