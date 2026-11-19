@@ -4,6 +4,7 @@ namespace Project.Core;
 
 public class Incident : MapObject
 {
+    [JsonInclude] private int IncidentID { get; set; }
     [JsonInclude] private IncidentType type { get; set; }
     [JsonInclude] private IncidentStatus status { get; set; }
     [JsonInclude] private IncidentPriority priority { get; set; }
