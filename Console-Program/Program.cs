@@ -3,7 +3,6 @@ using static System.Math;
 using static System.Random;
 using Project.Data;
 
-
 //either the programm checks if something is correct or it just set the attributes with the values choosen by the player
 
 
