@@ -1,6 +1,7 @@
 ﻿using Project.Core;
 using static System.Math;
 using static System.Random;
+using Project.Data;
 
 
 //either the programm checks if something is correct or it just set the attributes with the values choosen by the player
@@ -67,7 +68,7 @@ void GameLoop()
                         case "1":
                     {
                         Console.WriteLine("Whats the Emergencytype?\n1.Police\n2.Fire\n3.Medical"); //checking if the correct type is choosen
-                        IncidentType x = GetIncident.getIncidentType(); //This is specificed for 1 objekt
+                        IncidentType x = incident.GetIncident(random_id).getIncidentType(); //This is specificed for 1 objekt
                         if (Console.ReadLine()=="1")
                             if (IncidentType.Police == x)
                                 Console.WriteLine("Correct Type Choosen");
