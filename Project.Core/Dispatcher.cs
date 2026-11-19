@@ -1,15 +1,7 @@
 namespace Project.Core;
-
-
-
-
-
-
 //Dispatcher class
 //Wouldn't there have to be an array to store all the incdients that are registered?
 //Also i cant't really do much much i think because there is not a lot to base the class off of
-
-
 public class Dispatcher
 {
     //public int maxIncidentsAtOnce = 10; // NOT NEEDED ANYMORE BECAUSE OF STRING LIST//max incidents at once, could be changed to a variable that is set in the constructor
