@@ -2,7 +2,7 @@ using System.Text.Json;
 using Project.Core;
 namespace Project.Data;
 
-class D_IncidentFetcher
+public class D_IncidentFetcher
 {
     string filename = "incidentData.json";
     public Incident GetIncident(int IncidentID)
