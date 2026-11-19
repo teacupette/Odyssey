@@ -1,19 +1,18 @@
+using System.Net;
+using System.Text.Json.Serialization;
+
 namespace Project.Core;
+
 public class Incident : MapObject
 {
-    private IncidentType type{get; set;}
-    private IncidentStatus status{get; set;}
-    private IncidentPriority priority{get; set;}
-    private List<EmergencyUnit> unitAssignement = new List<EmergencyUnit>();
-    private string description{get; set;} = String.Empty;
+    [JsonInclude] private int IncidentID { get; set; }
+    [JsonInclude] private IncidentType type { get; set; }
+    [JsonInclude] private IncidentStatus status { get; set; }
+    [JsonInclude] private IncidentPriority priority { get; set; }
+    [JsonInclude] private List<EmergencyUnit> unitAssignement = new List<EmergencyUnit>();
+    [JsonInclude] private string description { get; set; } = String.Empty;
 
-    public string IncidentDescription // method because of private field
-    {
-        get { return description;}
-        set { description = value;}
-    }   
-
-    public Incident(IncidentType type, IncidentStatus status, IncidentPriority priority, string description, (int, int) position): base(position)
+    public Incident(IncidentType type, IncidentStatus status, IncidentPriority priority, string description, (int, int) position) : base(position)
     {
         this.type = type;
         this.status = status;
@@ -37,9 +36,14 @@ public class Incident : MapObject
         return description; //this is just temporary
     }
 
-    public IncidentType getIncidentType() //to check if the user inputs the correct incident type
+    public IncidentType getIncidentType()
     {
         return type;
+    }
+
+    public IncidentPriority getIncidentPriority()
+    {
+        return priority;
     }
 
     public IncidentStatus getIncidentStatus()
@@ -47,11 +51,8 @@ public class Incident : MapObject
         return status;
     }
 
-    public IncidentPriority GetIncidentPriority()
+    public int getIncidentId()
     {
-        return priority;
+        return IncidentID;
     }
-    
-
-
 }
