@@ -1,6 +1,6 @@
 namespace Project.Core;
 
-class EmergencyUnit : MapObject
+public class EmergencyUnit : MapObject
 {
     private EmergencyUnitType type;
 

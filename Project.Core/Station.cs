@@ -1,6 +1,6 @@
 namespace Project.Core;
 
-class Station : MapObject
+public class Station : MapObject
 {
     private List<EmergencyUnit> assignedUnits= new List<EmergencyUnit>(); 
     private StationType type;

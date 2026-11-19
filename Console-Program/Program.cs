@@ -8,7 +8,7 @@ using System.Dynamic;
 using System.Net.NetworkInformation;
 
 Console.WriteLine("Start? PRESS ENTER TO START");
-string line;
+string? line;
 
 
 

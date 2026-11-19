@@ -1,6 +1,6 @@
 namespace Project.Core;
 
-class Shift
+public class Shift
 {
     private int shiftTime;
     private int completedIncidents;

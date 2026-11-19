@@ -1,14 +1,14 @@
 namespace Project.Core;
 
 
-enum AvailabilityStatus
+public enum AvailabilityStatus
 {
     Available,
     OnRoute,
     OnScene,
     Returning
 }
-enum EmergencyUnitType
+public enum EmergencyUnitType
 {
     Firetruck,
     FiretruckLadder,
@@ -16,12 +16,12 @@ enum EmergencyUnitType
     PoliceCar,
     Ambulance
 }
-enum IncidentPriority{
+public enum IncidentPriority{
     Low,
     Medium,
     High
 }
-enum IncidentStatus
+public enum IncidentStatus
 
 {
     Incoming,
@@ -29,7 +29,7 @@ enum IncidentStatus
     Completed
 }
 
-enum IncidentType
+public enum IncidentType
 {
     Fire,
     Police,
@@ -38,7 +38,7 @@ enum IncidentType
     FireLadder
 
 }
-enum StationType
+public enum StationType
 {
     FireStation,
     PoliceStation,

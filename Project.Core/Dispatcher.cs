@@ -10,7 +10,7 @@ namespace Project.Core;
 //Also i cant't really do much much i think because there is not a lot to base the class off of
 
 
-class Dispatcher
+public class Dispatcher
 {
     //public int maxIncidentsAtOnce = 10; // NOT NEEDED ANYMORE BECAUSE OF STRING LIST//max incidents at once, could be changed to a variable that is set in the constructor
     //private string[] incidents = new Incident[maxIncidentsAtOnce]; //NOT NEEDED ANYMORE BECAUSE OF STRING LIST 
@@ -21,7 +21,7 @@ class Dispatcher
         get {return incidents;}
         set {incidents = value;}
     }
-    public int id{get; set;}
+    public int id{get; private set;}
     private string name{get; set;}
     private Incident? selectedIncident;
     public Dispatcher(int id, string name)
