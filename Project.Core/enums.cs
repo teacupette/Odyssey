@@ -1,3 +1,4 @@
+namespace Project.Core;
 
 
 enum AvailabilityStatus

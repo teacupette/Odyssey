@@ -1,3 +1,5 @@
+namespace Project.Core;
+
 //First testing for dispatcher class
 
 //using which other files

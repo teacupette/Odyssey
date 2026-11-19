@@ -1,4 +1,6 @@
-﻿Console.WriteLine("Hello");
+﻿using Project.Core;
+
+Console.WriteLine("Hello");
 string line;
 while((line = Console.ReadLine()) != "stop")
 {

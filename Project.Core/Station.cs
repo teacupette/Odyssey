@@ -1,3 +1,5 @@
+namespace Project.Core;
+
 class Station : MapObject
 {
     private List<EmergencyUnit> assignedUnits= new List<EmergencyUnit>(); 

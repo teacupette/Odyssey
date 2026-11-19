@@ -1,3 +1,5 @@
+namespace Project.Core;
+
 public class MapObject
 {
     (int, int) position; //Just 2D
