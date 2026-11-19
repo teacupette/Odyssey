@@ -8,7 +8,7 @@ using System.Dynamic;
 using System.Net.NetworkInformation;
 
 Console.WriteLine("Start? PRESS ENTER TO START");
-string? line;
+//c string? line;
 
 
 
@@ -76,7 +76,7 @@ void GameLoop()
                     {
                         //IncidentPriority
                         Console.WriteLine("Whats the IncidentPriority?\n1.Low\n2.Medium\n3.High"); //checking if the correct type is choosen
-                        IncidentPriority x = incident1.GetIncidentPriority(); //This is specificed for 1 objekt
+                        IncidentPriority x = incident1.getIncidentPriority(); //This is specificed for 1 objekt
                         if (Console.ReadLine()=="1")
                             if (IncidentPriority.Low== x)
                                 Console.WriteLine("Correct Priority Choosen");
