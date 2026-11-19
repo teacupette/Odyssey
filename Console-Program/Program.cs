@@ -1,16 +1,23 @@
 ﻿using Project.Core;
-
+using static System.Math;
+using static System.Random;
+using Project.Data;
+using System.Dynamic;
+using System.Net.NetworkInformation;
 
 //either the programm checks if something is correct or it just set the attributes with the values choosen by the player
 
 
-using System.Dynamic;
-using System.Net.NetworkInformation;
+
 
 Console.WriteLine("Start? PRESS ENTER TO START");
 //c string? line;
 
+//Random Class Objekt
+Random randomiser = new Random();
 
+//Incident Data Class
+D_IncidentFetcher incident = new D_IncidentFetcher();
 
 Dispatcher dispatcher = new Dispatcher(1, "Test");
 //EmergencyUnit policecar1 = new EmergencyUnit(EmergencyUnitType.PoliceCar, StationType.PoliceStation, AvailabilityStatus.Available,(0,0));
@@ -51,7 +58,8 @@ void GameLoop()
     {
         case"1":
             {
-                bool inIncident = true; 
+                bool inIncident = true;
+                int random_id = randomiser.Next(1,11);
                 while (inIncident==true)
                 {   
                     Console.WriteLine("1.EmergencyType\n2.IncidentPriority\n3.Add Description \n4.Exit Incident\n-----------------------\n5.|Write stop to stop the program|");
@@ -60,7 +68,7 @@ void GameLoop()
                         case "1":
                     {
                         Console.WriteLine("Whats the Emergencytype?\n1.Police\n2.Fire\n3.Medical"); //checking if the correct type is choosen
-                        IncidentType x = incident1.getIncidentType(); //This is specificed for 1 objekt
+                        IncidentType x = incident.GetIncident(random_id).getIncidentType(); //This is specificed for 1 objekt
                         if (Console.ReadLine()=="1")
                             if (IncidentType.Police == x)
                                 Console.WriteLine("Correct Type Choosen");
@@ -146,7 +154,7 @@ void GameLoop()
                 break;
             }
     }
-    //Console.WriteLine(incident1text); //this has to be its own thing
+    
     
     
     

@@ -7,6 +7,7 @@ public class D_IncidentFetcher
     string filename = "incidentData.json";
     public Incident GetIncident(int IncidentID)
     {
+        if (!File.Exists(filename)) { throw new NullIncidentJsonException(filename + " doesn't exist"); }
         Incident[]? incidents = JsonSerializer.Deserialize<Incident[]>(filename);
         if (incidents == null) { throw new NullIncidentJsonException(filename + " is null and was referenced"); }
         foreach (Incident Current in incidents)
