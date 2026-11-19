@@ -5,7 +5,7 @@ using System.Dynamic;
 using System.Net.NetworkInformation;
 
 Console.WriteLine("Start? PRESS ENTER TO START");
-string? line;
+string line;
 
 
 
@@ -27,7 +27,7 @@ dispatcher.RegisterNewIncident(incident3);
 
 //----------
 bool testing = false; //testing purpose
-while((line = Console.ReadLine()) != "stop" && testing ==false)
+while(testing ==false)
 {
     
 
@@ -40,7 +40,9 @@ while((line = Console.ReadLine()) != "stop" && testing ==false)
 
 
 void GameLoop()
-{
+{   
+    
+
     Console.WriteLine("1.New/Next Incident\n2.IncidentList\n3.Stop the programm\n4.See Stats (I.P.)");
     switch (Console.ReadLine())
     {
@@ -49,7 +51,7 @@ void GameLoop()
                 bool inIncident = true; 
                 while (inIncident==true)
                 {   
-                    Console.WriteLine("1.EmergencyType\n2.IncidentPriority\n3.Add Description \n4.Exit Incident\n-----------------------\n|Write stop to stop the program|");
+                    Console.WriteLine("1.EmergencyType\n2.IncidentPriority\n3.Add Description \n4.Exit Incident\n-----------------------\n5.|Write stop to stop the program|");
                     switch (Console.ReadLine())
                     {
                         case "1":
@@ -96,9 +98,17 @@ void GameLoop()
                     {
                         //Exit Incident
                         inIncident = false;
+
                         break;
                         
                     }
+
+                        case "stop":
+                            {
+                                Environment.Exit(0);
+                                break;
+                            }
+
                         default:
                     {
                         break;
