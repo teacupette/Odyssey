@@ -1,7 +1,7 @@
 namespace Project.Core;
 
 [Serializable]
-class NullIncidentJsonException : Exception
+public class NullIncidentJsonException : Exception
 {
     public NullIncidentJsonException()
     {
@@ -16,7 +16,7 @@ class NullIncidentJsonException : Exception
     }
 }
 [Serializable]
-class InvalidIncidentIdReferenceException : Exception
+public class InvalidIncidentIdReferenceException : Exception
 {
     public InvalidIncidentIdReferenceException(){}
     public InvalidIncidentIdReferenceException(string message) : base(message){}
