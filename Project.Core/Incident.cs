@@ -50,4 +50,9 @@ public class Incident : MapObject
     {
         return status;
     }
+
+    public int getIncidentId()
+    {
+        return IncidentID;
+    }
 }
