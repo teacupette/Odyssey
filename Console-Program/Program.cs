@@ -125,7 +125,7 @@ void GameLoop()
                 int a = 1;
                 foreach (Incident incident in dispatcher.showIncident)
                 {
-                    Console.WriteLine("\nIncident: " + a + "\nIncidentType: " + incident.getIncidentType()+"\nIncidentStatus: " + incident.getIncidentStatus() + "\nIncidentPriority: " + incident.GetIncidentPriority() );
+                    Console.WriteLine("\nIncident: " + a + "\nIncidentType: " + incident.getIncidentType()+"\nIncidentStatus: " + incident.getIncidentStatus() + "\nIncidentPriority: " + incident.getIncidentPriority() );
                     a++;
                 }
                 
