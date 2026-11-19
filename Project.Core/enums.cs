@@ -16,7 +16,8 @@ public enum EmergencyUnitType
     PoliceCar,
     Ambulance
 }
-public enum IncidentPriority{
+public enum IncidentPriority
+{
     Low,
     Medium,
     High

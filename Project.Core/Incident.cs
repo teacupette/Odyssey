@@ -6,11 +6,11 @@ namespace Project.Core;
 public class Incident : MapObject
 {
     [JsonInclude] private int IncidentID { get; set; }
-    [JsonInclude] private IncidentType type { get; set; }
-    [JsonInclude] private IncidentStatus status { get; set; }
-    [JsonInclude] private IncidentPriority priority { get; set; }
+    [JsonInclude] private IncidentType type { get; set; } //checked by user
+    [JsonInclude] private IncidentStatus status { get; set; } //changed automaticly
+    [JsonInclude] private IncidentPriority priority { get; set; } //checked by user
     [JsonInclude] private List<EmergencyUnit> unitAssignement = new List<EmergencyUnit>();
-    [JsonInclude] private string description { get; set; } = String.Empty;
+    [JsonInclude] private string description { get; set; } = String.Empty; //input by user
 
     public Incident(IncidentType type, IncidentStatus status, IncidentPriority priority, string description, (int, int) position) : base(position)
     {
