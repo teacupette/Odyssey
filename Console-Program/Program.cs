@@ -2,13 +2,13 @@
 using static System.Math;
 using static System.Random;
 using Project.Data;
-
+using System.Dynamic;
+using System.Net.NetworkInformation;
 
 //either the programm checks if something is correct or it just set the attributes with the values choosen by the player
 
 
-using System.Dynamic;
-using System.Net.NetworkInformation;
+
 
 Console.WriteLine("Start? PRESS ENTER TO START");
 //c string? line;
@@ -154,7 +154,7 @@ void GameLoop()
                 break;
             }
     }
-    //Console.WriteLine(incident1text); //this has to be its own thing
+    
     
     
     
