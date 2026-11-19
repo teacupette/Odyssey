@@ -1,6 +1,5 @@
 namespace Project.Core;
 
-
 public enum AvailabilityStatus
 {
     Available,
