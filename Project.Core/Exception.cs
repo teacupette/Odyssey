@@ -31,3 +31,10 @@ public class DefaultMapFileDNEException : Exception
     public DefaultMapFileDNEException(string message) : base(message){}
     public DefaultMapFileDNEException(string message, Exception DefaultMapDNEException) : base (message, DefaultMapDNEException){}
 }
+[Serializable]
+public class InvalidSaveIDException : Exception
+{
+    public InvalidSaveIDException(){}
+    public InvalidSaveIDException(string message) : base(message){}
+    public InvalidSaveIDException(string message, Exception InvalidSaveIDException) : base(message, InvalidSaveIDException){}
+}
