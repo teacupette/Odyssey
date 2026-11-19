@@ -1,3 +1,4 @@
+using System.Net;
 using System.Text.Json.Serialization;
 
 namespace Project.Core;
@@ -32,5 +33,20 @@ public class Incident : MapObject
     public string getInformation()
     {
         return description; //this is just temporary
+    }
+
+    public IncidentType getIncidentType()
+    {
+        return type;
+    }
+
+    public IncidentPriority getIncidentPriority()
+    {
+        return priority;
+    }
+
+    public IncidentStatus getIncidentStatus()
+    {
+        return status;
     }
 }
