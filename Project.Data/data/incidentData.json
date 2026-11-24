@@ -1,30 +1,158 @@
 { "Incidents" : [
-        { 
-            "IncidentID" : "1",
-            "type" : "police",
-            "status" : "active",
-            "priority" : "Low",
-            "unitAssignement" : [],
-            "description" : "",
-            "call" : "\nOperator: 112, whats Emergency\nCallerOperator: “112, what’s your emergency?\nCaller: My shop’s fire alarm has gone off. The address is Perlegade 67.\nOperator: What’s your phone number, in case we get cut off?\nOperator: Are you at the shop now, or is anyone there?\nCaller: “No, I’m at home, far away. I just got an alarm notification on my phone.\nOperator: “Do you know of any smoke, fire, or smell, or has anyone nearby reported anything?\nCaller: No, I only know the alarm has been triggered.\nperator: Is the building more than one floor, and is it connected to other buildings or homes?\nCaller: No, only ground floor, and it stands alone.\nOperator: What’s the name of the shop, and your name?\nCaller: Alberts Bageri. Albert Mikkelsen. \nOperator: Is there anything dangerous inside, like gas, ovens that might be on, or other hazards?\nCaller: There are gas ovens, but they should be off at night.\nOperator: Has this alarm gone off falsely before? \nCaller: No, definitely not.\nOperator: Can the fire service access the building, or does someone need to bring a key?\nCaller: There’s a key box by the front door. I can also drive over.\nOperator: Please don’t go inside if you arrive before us. Wait outside and stay reachable on this number. We are sending help now."
+        
+        {
+            "IncidentID": "1",
+            "type": "Fire",
+            "status": "active",
+            "priority": "Medium",
+            "unitAssignement": [],
+            "description": "",
+            "call": "Operator: \"112, what's your emergency?\"\nCaller: \"My shop's fire alarm has gone off. The address is Perlegade 67.\"\nOperator: \"What's your phone number, in case we get cut off?\"\nOperator: \"Are you at the shop now, or is anyone there?\"\nCaller: \"No, I'm at home, far away. I just got an alarm notification on my phone.\"\nOperator: \"Do you know of any smoke, fire, or smell, or has anyone nearby reported anything?\"\nCaller: \"No, I only know the alarm has been triggered.\"\nOperator: \"Is the building more than one floor, and is it connected to other buildings or homes?\"\nCaller: \"No, only ground floor, and it stands alone.\"\nOperator: \"What's the name of the shop, and your name?\"\nCaller: \"Alberts Bageri. Albert Mikkelsen.\"\nOperator: \"Is there anything dangerous inside, like gas, ovens that might be on, or other hazards?\"\nCaller: \"There are gas ovens, but they should be off at night.\"\nOperator: \"Has this alarm gone off falsely before?\"\nCaller: \"No, definitely not.\"\nOperator: \"Can the fire service access the building, or does someone need to bring a key?\"\nCaller: \"There's a key box by the front door. I can also drive over.\"\nOperator: \"Please don't go inside if you arrive before us. Wait outside and stay reachable on this number. We are sending help now.\""
         },
-
-        { 
-            "IncidentID" : "2",
-            "type" : "fire",
-            "status" : "active",
-            "priority" : "Low",
-            "unitAssignement" : [],
-            "description" : ""
+        {
+            "IncidentID": "2",
+            "type": "Fire",
+            "status": "active",
+            "priority": "High",
+            "unitAssignement": [],
+            "description": "",
+            "call": "Operator: \"112, what's your emergency?\"\nCaller: \"The fire alarm at our restaurant is going off. We're at Rådhustorvet 12.\"\nOperator: \"What's your phone number, in case we get cut off?\"\nOperator: \"Are you at the restaurant now, or is anyone there?\"\nCaller: \"Yes, I'm actually inside right now — I came to check after getting the alert.\"\nOperator: \"Do you see or smell any smoke or fire?\"\nCaller: \"I don't see flames, but there's a faint burning smell near the kitchen.\"\nOperator: \"Is the building more than one floor, and is it connected to other buildings or homes?\"\nCaller: \"It's two floors, and it shares a wall with the bakery next door.\"\nOperator: \"What's the name of the restaurant, and your name?\"\nCaller: \"Havnekroen. Mette Jørgensen.\"\nOperator: \"Is there anything dangerous inside, like gas, ovens that might be on, or other hazards?\"\nCaller: \"There's a gas stove, and I'm not sure if it was switched off after closing.\"\nOperator: \"Has this alarm gone off falsely before?\"\nCaller: \"Yes, twice this year, but I can smell something this time, so I don't think it's false.\"\nOperator: \"Can the fire service access the building, or does someone need to bring a key?\"\nCaller: \"The front door is unlocked right now since I'm here.\"\nOperator: \"Please leave the building immediately and wait outside at a safe distance. Stay reachable on this number. We are sending help now.\""
         },
-
-        { 
-            "IncidentID" : "3",
-            "type" : "medical", 
-            "status" : "active",
-            "priority" : "Low",
-            "unitAssignement" : [],
-            "description" : ""
+        {
+            "IncidentID": "3",
+            "type": "Fire",
+            "status": "active",
+            "priority": "Medium-High",
+            "unitAssignement": [],
+            "description": "",
+            "call": "Operator: \"112, what's your emergency?\"\nCaller: \"I'm getting a fire alarm notification for my apartment building. The address is Østergade 34.\"\nOperator: \"What's your phone number, in case we get cut off?\"\nOperator: \"Are you at the building now, or is anyone there?\"\nCaller: \"No, I'm at work, about twenty minutes away.\"\nOperator: \"Do you know of any smoke, fire, or smell, or has anyone nearby reported anything?\"\nCaller: \"No, but a neighbor just texted me saying she can hear the alarm going off in the stairwell.\"\nOperator: \"Is the building more than one floor, and is it connected to other buildings or homes?\"\nCaller: \"It's five floors, twelve apartments, and it's attached to the building next door.\"\nOperator: \"What's the name of the building or management company, and your name?\"\nCaller: \"It's managed by Sønderbo Ejendomme. My name is Thomas Lindgren.\"\nOperator: \"Is there anything dangerous inside, like gas, ovens that might be on, or other hazards?\"\nCaller: \"There's gas heating in some of the units, but I'm not sure which ones.\"\nOperator: \"Has this alarm gone off falsely before?\"\nCaller: \"Yes, once last winter because of burnt toast in a neighbor's kitchen.\"\nOperator: \"Can the fire service access the building, or does someone need to bring a key?\"\nCaller: \"The main door code is 4471, and the caretaker lives on the ground floor if needed.\"\nOperator: \"Please stay where you are and keep this number reachable. We are sending help now. If you reach the building before us, do not go inside.\""
+        },
+        {
+            "IncidentID": "4",
+            "type": "Fire",
+            "status": "active",
+            "priority": "High",
+            "unitAssignement": [],
+            "description": "",
+            "call": "Operator: \"112, what's your emergency?\"\nCaller: \"The fire alarm at the warehouse I manage just went off. It's at Industrivej 9.\"\nOperator: \"What's your phone number, in case we get cut off?\"\nOperator: \"Are you at the warehouse now, or is anyone there?\"\nCaller: \"No, I'm about ten minutes away. I got the alert on my phone.\"\nOperator: \"Do you know of any smoke, fire, or smell, or has anyone nearby reported anything?\"\nCaller: \"No, nothing yet, but no one's there this late to check.\"\nOperator: \"Is the building more than one floor, and is it connected to other buildings or homes?\"\nCaller: \"It's a single-floor warehouse, standalone, no other buildings attached.\"\nOperator: \"What's the name of the company, and your name?\"\nCaller: \"Sønderjysk Lager A/S. My name is Peter Clausen.\"\nOperator: \"Is there anything dangerous inside, like gas, chemicals, or other hazards?\"\nCaller: \"Yes — we store cleaning chemicals and some pallets of aerosol cans in the back section.\"\nOperator: \"Has this alarm gone off falsely before?\"\nCaller: \"Yes, a few times because of dust from the forklifts, but I can't rule it out this time.\"\nOperator: \"Can the fire service access the building, or does someone need to bring a key?\"\nCaller: \"There's a keypad entry, code 9281, on the side door.\"\nOperator: \"Please do not enter the building when you arrive. Wait outside at a safe distance and stay reachable on this number. We are sending help now, and I'll let them know about the chemicals inside.\""
+        },
+        {
+            "IncidentID": "5",
+            "type": "Police",
+            "status": "active",
+            "priority": "High",
+            "unitAssignement": [],
+            "description": "",
+            "call": "Operator: \"112, what's your emergency?\"\nCaller: \"Someone's breaking into the house next door right now, I can hear glass breaking.\"\nOperator: \"What's the address, and what's your phone number in case we get cut off?\"\nCaller: \"Møllegade 22. My number is—\" (gives number)\nOperator: \"Are you inside your own home right now?\"\nCaller: \"Yes, I'm locked inside, watching through the window.\"\nOperator: \"Can you see how many people, and do you see any weapons?\"\nCaller: \"Just one person as far as I can tell. I don't see a weapon, but I can't be sure.\"\nOperator: \"Do you know if anyone is inside that house right now?\"\nCaller: \"No, the family is away — I'm watering their plants this week, that's how I know they're not home.\"\nOperator: \"What's your name, and do you know the homeowners' names?\"\nCaller: \"My name is Karina Holm. The house belongs to the Petersen family.\"\nOperator: \"Stay inside, keep your doors locked, and don't go outside or approach them. Stay on the line with me if you can. We are sending officers now.\"\nCaller: \"Okay, they're still near the back door.\"\nOperator: \"Keep watching from a safe distance inside and tell me if anything changes — if they enter the house, if they leave, or if you see a vehicle.\""
+        },
+        {
+            "IncidentID": "6",
+            "type": "Medical",
+            "status": "active",
+            "priority": "Critical",
+            "unitAssignement": [],
+            "description": "",
+            "call": "Operator: \"112, what's your emergency?\"\nCaller: \"My husband is clutching his chest and says he can't breathe properly.\"\nOperator: \"What's the address, and your phone number in case we get cut off?\"\nCaller: \"Nørregade 8, second floor. My number is—\" (gives number)\nOperator: \"Is he conscious and talking to you right now?\"\nCaller: \"Yes, but he's pale and sweating a lot, and he says the pain is going down his left arm.\"\nOperator: \"How old is he, and does he have any heart conditions or take any medication?\"\nCaller: \"He's 61. He has high blood pressure and takes medication for it, but no heart problems before.\"\nOperator: \"Is he able to sit or lie down comfortably?\"\nCaller: \"He's sitting on the couch right now.\"\nOperator: \"What's his name, and your name?\"\nCaller: \"His name is Jørgen Nielsen. I'm his wife, Birthe.\"\nOperator: \"Help him sit in a comfortable position, loosen any tight clothing, and don't let him walk around. If he has aspirin and isn't allergic, you can give him one to chew. Stay with him and call out if he loses consciousness or stops breathing. An ambulance is on the way.\""
+        },
+        {
+            "IncidentID": "7",
+            "type": "Medical",
+            "status": "active",
+            "priority": "High",
+            "unitAssignement": [],
+            "description": "",
+            "call": "Operator: \"112, what's your emergency?\"\nCaller: \"My daughter fell off her bike and hit her head, she's bleeding a lot.\"\nOperator: \"What's the address, and your phone number in case we get cut off?\"\nCaller: \"We're on the bike path by Skovvej, near the playground. My number is—\" (gives number)\nOperator: \"Is she conscious and responding to you?\"\nCaller: \"Yes, she's crying and talking, but there's a lot of blood from her forehead.\"\nOperator: \"How old is she, and is she moving all her arms and legs normally?\"\nCaller: \"She's 8. Yes, she's moving everything, just really shaken up.\"\nOperator: \"Is she wearing a helmet?\"\nCaller: \"Yes, she had it on, it's cracked on one side.\"\nOperator: \"What's her name, and your name?\"\nCaller: \"Her name is Freja. I'm her father, Mads Sørensen.\"\nOperator: \"Keep her still and don't remove the helmet. Apply firm pressure to the cut with a clean cloth or your hand to control the bleeding. Keep talking to her and let me know if she becomes drowsy, confused, or vomits. An ambulance is on the way to the playground on Skovvej.\""
+        },
+        {
+            "IncidentID": "8",
+            "type": "Firetraffic",
+            "status": "active",
+            "priority": "High",
+            "unitAssignement": [],
+            "description": "",
+            "call": "Operator: \"112, what's your emergency?\"\nCaller: \"There's been a car accident, two cars collided at the intersection of Vestergade and Jernbanegade.\"\nOperator: \"What's your phone number, in case we get cut off?\"\nOperator: \"Is anyone trapped inside either vehicle?\"\nCaller: \"I don't think so, both drivers are out, but one of them is limping and holding his leg.\"\nOperator: \"Are either of them bleeding heavily or unconscious?\"\nCaller: \"No bleeding that I can see, but the other driver looks shaken and is sitting on the curb.\"\nOperator: \"Is traffic still moving through the intersection?\"\nCaller: \"Yes, cars are swerving around the wreckage, it's dangerous.\"\nOperator: \"What's your name?\"\nCaller: \"Simon Vestergaard, I was driving behind them when it happened.\"\nOperator: \"If it's safe to do so, try to warn oncoming traffic or put on hazard lights, but don't put yourself at risk. Stay with the injured driver and keep him from walking around. An ambulance and police are on the way.\""
+        },
+        {
+            "IncidentID": "9",
+            "type": "Police",
+            "status": "active",
+            "priority": "High",
+            "unitAssignement": [],
+            "description": "",
+            "call": "Operator: \"112, what's your emergency?\"\nCaller: \"My neighbors are screaming at each other again, and I just heard something smash.\"\nOperator: \"What's the address, and your phone number in case we get cut off?\"\nCaller: \"Fjordvej 15, apartment 3B. My number is—\" (gives number)\nOperator: \"Can you tell if anyone is being physically hurt?\"\nCaller: \"I heard a woman shout 'stop it' and then crying, I'm not sure if anyone's been hit.\"\nOperator: \"Have you seen this happen before?\"\nCaller: \"Yes, a few times, but I've never called before.\"\nOperator: \"What's your name?\"\nCaller: \"Lene Andersen, I live across the hall.\"\nOperator: \"Please stay in your own apartment and don't go over there. Keep your door locked. We are sending officers now.\""
+        },
+        {
+            "IncidentID": "10",
+            "type": "Fire",
+            "status": "active",
+            "priority": "Critical",
+            "unitAssignement": [],
+            "description": "",
+            "call": "Operator: \"112, what's your emergency?\"\nCaller: \"There's a fire in my kitchen, the curtains caught from the stove!\"\nOperator: \"What's the address, and your phone number in case we get cut off?\"\nCaller: \"Skolegade 41, second floor. My number is—\" (gives number)\nOperator: \"Is everyone out of the apartment?\"\nCaller: \"My kids are with me in the hallway now, but the fire is spreading to the cabinets.\"\nOperator: \"How many people live there, and is everyone accounted for?\"\nCaller: \"Just me and my two kids, we're all out.\"\nOperator: \"What's your name?\"\nCaller: \"Camilla Sørensen.\"\nOperator: \"Leave the building immediately and close the door behind you if you can do so safely. Do not go back inside for anything. Wait outside at a safe distance. Fire service is on the way.\""
+        },
+        {
+            "IncidentID": "11",
+            "type": "Police",
+            "status": "active",
+            "priority": "Critical",
+            "unitAssignement": [],
+            "description": "",
+            "call": "Operator: \"112, what's your emergency?\"\nCaller: \"I can't find my son, he was playing in the park and now he's gone.\"\nOperator: \"What's the park's address, and your phone number in case we get cut off?\"\nCaller: \"Byparken near Kongensgade. My number is—\" (gives number)\nOperator: \"How old is he, and what was he wearing?\"\nCaller: \"He's 5, wearing a blue jacket and red shoes.\"\nOperator: \"How long has he been missing?\"\nCaller: \"About ten minutes, I've looked everywhere nearby.\"\nOperator: \"What's his name, and your name?\"\nCaller: \"His name is Victor. I'm his mother, Pernille Dahl.\"\nOperator: \"Stay at the park so he can find his way back to you, and keep calling his name. Ask anyone nearby if they've seen him. We are sending officers now to help search.\""
+        },
+        {
+            "IncidentID": "12",
+            "type": "Medical",
+            "status": "active",
+            "priority": "Critical",
+            "unitAssignement": [],
+            "description": "",
+            "call": "Operator: \"112, what's your emergency?\"\nCaller: \"Someone pulled a man out of the harbor, he's not breathing!\"\nOperator: \"What's the exact location, and your phone number in case we get cut off?\"\nCaller: \"The harbor by Toldbodgade, near the fishing boats. My number is—\" (gives number)\nOperator: \"Is he completely unresponsive? Do you know CPR?\"\nCaller: \"He's not moving or coughing. I've done a CPR course before, yes.\"\nOperator: \"I need you to start CPR right now — 30 chest compressions, then two breaths, and keep repeating. Can you do that?\"\nCaller: \"Yes, starting now.\"\nOperator: \"What's your name?\"\nCaller: \"Anders Krogh.\"\nOperator: \"Keep going, don't stop until paramedics arrive or he starts breathing on his own. I'll stay on the line with you.\""
+        },
+        {
+            "IncidentID": "13",
+            "type": "Fire",
+            "status": "active",
+            "priority": "Critical",
+            "unitAssignement": [],
+            "description": "",
+            "call": "Operator: \"112, what's your emergency?\"\nCaller: \"I smell gas really strongly in my stairwell, I think there's a leak.\"\nOperator: \"What's the address, and your phone number in case we get cut off?\"\nCaller: \"Grønnegade 19. My number is—\" (gives number)\nOperator: \"Are you currently inside the building?\"\nCaller: \"Yes, but I'm heading outside now.\"\nOperator: \"Do you know how many apartments or people are in the building?\"\nCaller: \"There are six apartments, I'm not sure how many people are home right now.\"\nOperator: \"What's your name?\"\nCaller: \"Henrik Poulsen.\"\nOperator: \"Get everyone out of the building if you can do so quickly and safely, and do not turn on any lights, switches, or use your phone once outside near the building. Don't light anything or use an elevator. Wait outside at a safe distance. We are sending the fire service now.\""
+        },
+        {
+            "IncidentID": "14",
+            "type": "Police",
+            "status": "active",
+            "priority": "Critical",
+            "unitAssignement": [],
+            "description": "",
+            "call": "Operator: \"112, what's your emergency?\"\nCaller: \"A group of guys is beating someone up outside the bar on Algade.\"\nOperator: \"What's the exact location, and your phone number in case we get cut off?\"\nCaller: \"Right outside Café Strøm on Algade. My number is—\" (gives number)\nOperator: \"How many people are involved, and is the person on the ground still conscious?\"\nCaller: \"Three guys against one. He's on the ground, still moving but not getting up.\"\nOperator: \"Are there any weapons involved?\"\nCaller: \"I didn't see any, just fists and kicking.\"\nOperator: \"What's your name?\"\nCaller: \"Jonas Reimer, I'm watching from across the street.\"\nOperator: \"Stay back and don't intervene. Keep watching from a safe distance and tell me if they leave or if anything changes. We are sending police and an ambulance now.\""
+        },
+        {
+            "IncidentID": "15",
+            "type": "Medical",
+            "status": "active",
+            "priority": "Critical",
+            "unitAssignement": [],
+            "description": "",
+            "call": "Operator: \"112, what's your emergency?\"\nCaller: \"My friend just ate something with peanuts and her face and throat are swelling up fast.\"\nOperator: \"What's the address, and your phone number in case we get cut off?\"\nCaller: \"We're at a restaurant, Bistro Lindegade on Lindegade. My number is—\" (gives number)\nOperator: \"Is she having trouble breathing?\"\nCaller: \"Yes, her voice sounds strange and she's struggling a bit.\"\nOperator: \"Does she carry an EpiPen or any allergy medication?\"\nCaller: \"Yes! She has one in her bag, I'm grabbing it now.\"\nOperator: \"What's her name, and your name?\"\nCaller: \"Her name is Sofie. I'm Nanna.\"\nOperator: \"Use the EpiPen now — remove the cap, press firmly against her outer thigh, and hold for a few seconds. Then keep her calm and sitting upright. An ambulance is on the way.\""
+        },
+        {
+            "IncidentID": "16",
+            "type": "Medical",
+            "status": "active",
+            "priority": "High",
+            "unitAssignement": [],
+            "description": "",
+            "call": "Operator: \"112, what's your emergency?\"\nCaller: \"My mother fell down the stairs at her house and can't get up.\"\nOperator: \"What's the address, and your phone number in case we get cut off?\"\nCaller: \"Kirkevej 5. My number is—\" (gives number)\nOperator: \"Is she conscious and talking to you?\"\nCaller: \"Yes, she's awake but says her hip hurts a lot and she can't move her leg properly.\"\nOperator: \"How old is she, and does she have any health conditions?\"\nCaller: \"She's 84, she has osteoporosis and takes blood thinners.\"\nOperator: \"Is she bleeding anywhere?\"\nCaller: \"No visible bleeding, just a lot of pain in her hip.\"\nOperator: \"What's her name, and your name?\"\nCaller: \"Her name is Grethe Lauridsen. I'm her daughter, Inge.\"\nOperator: \"Don't try to move her or help her stand, as it could be a fracture. Keep her still, cover her with a blanket to keep her warm, and stay with her. An ambulance is on the way.\""
+        },
+        {
+            "IncidentID": "17",
+            "type": "Police",
+            "status": "active",
+            "priority": "Medium-High",
+            "unitAssignement": [],
+            "description": "",
+            "call": "Operator: \"112, what's your emergency?\"\nCaller: \"There's an unattended bag left outside the train station entrance, it's been sitting there for a while.\"\nOperator: \"What's the exact location, and your phone number in case we get cut off?\"\nCaller: \"The main entrance of Sønderborg train station. My number is—\" (gives number)\nOperator: \"Did you see anyone leave it there, or does it look suspicious in any way?\"\nCaller: \"No, I didn't see who left it, but it's been there at least twenty minutes and no one's claimed it.\"\nOperator: \"Is the area around it still busy with people?\"\nCaller: \"Yes, people are walking right past it.\"\nOperator: \"What's your name?\"\nCaller: \"Martin Bruhn, station staff member.\"\nOperator: \"Please keep people away from the bag if you can do so calmly, and don't touch or open it yourself. We are sending officers to assess it now.\""
         }
-    ]
+]
+    
 }
