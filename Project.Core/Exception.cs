@@ -10,13 +10,6 @@ public class JsonDNEException : Exception
     public JsonDNEException(string message, Exception DefaultMapDNEException) : base (message, DefaultMapDNEException){}
 }
 [Serializable]
-public class InvalidSaveIDException : Exception
-{
-    public InvalidSaveIDException(){}
-    public InvalidSaveIDException(string message) : base(message){}
-    public InvalidSaveIDException(string message, Exception InvalidSaveIDException) : base(message, InvalidSaveIDException){}
-}
-[Serializable]
 public class InvalidIDException : Exception
 {
     public InvalidIDException(){}
