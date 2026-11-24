@@ -4,6 +4,10 @@ namespace Project.Data;
 
 public class D_IncidentFetcher
 {
+    // ------------------------------------------------------------------------
+    // The D_IncidentFetcher class serves to return Incident objects by their IncidentID (which is stored in the .json)
+    // Note: If multiple Incident objects have the same ID, the one that is first in the .json will be returned
+    // ------------------------------------------------------------------------
     string filename = "incidentData.json";
     public Incident GetIncident(int IncidentID)
     {
