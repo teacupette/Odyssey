@@ -15,8 +15,8 @@ public class D_MapDataTool
     public Object GetMapSave(int MapID = 0)
     {
         // Validate MapID and the existence of the default map
-        if (MapID < 0 || MapID > MaxNumberOfSaves) { throw new InvalidSaveIDException("LOAD MapID " + MapID + " is out of the valid range <0," +  MaxNumberOfSaves + ">"); }
-        if (!File.Exists(SaveMapFilename[0])) { throw new DefaultMapFileDNEException("Default map file doesn't exist"); }
+        if (MapID < 0 || MapID > MaxNumberOfSaves) { throw new InvalidIDException("LOAD MapID " + MapID + " is out of the valid range <0," +  MaxNumberOfSaves + ">"); }
+        if (!File.Exists(SaveMapFilename[0])) { throw new JsonDNEException("Default map file doesn't exist"); }
 
         string WorkingFilename = SaveMapFilename[MapID];
 
@@ -25,13 +25,13 @@ public class D_MapDataTool
 
         Object? Map = JsonSerializer.Deserialize<Object>(WorkingFilename);
     
-        if (Map == null) { throw new DefaultMapFileDNEException("Default map file(" + SaveMapFilename[0] + ") is null"); }
+        if (Map == null) { throw new NullJsonException("Default map file(" + SaveMapFilename[0] + ") is null"); }
         return Map;
     }
     public void SaveMap(Object MapToSave, int MapID)
     {
         // Validate MapID, then save
-        if (MapID < 1 || MapID > MaxNumberOfSaves) { throw new InvalidSaveIDException("SAVE MapID " + MapID + " is out of the valid range <1," + MaxNumberOfSaves + ">"); }
+        if (MapID < 1 || MapID > MaxNumberOfSaves) { throw new InvalidIDException("SAVE MapID " + MapID + " is out of the valid range <1," + MaxNumberOfSaves + ">"); }
         File.WriteAllText(SaveMapFilename[MapID], JsonSerializer.Serialize(MapToSave));
     }
 }

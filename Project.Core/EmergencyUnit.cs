@@ -2,6 +2,7 @@ namespace Project.Core;
 
 public class EmergencyUnit : MapObject
 {
+    private int EmergencyUnitID;
     private EmergencyUnitType type;
 
     private Station homeStation;
@@ -11,8 +12,9 @@ public class EmergencyUnit : MapObject
     private Incident? AssignedIncident;
 
     //methods to be implemented
-    public EmergencyUnit(EmergencyUnitType type, Station homeStation, AvailabilityStatus status, (int, int) position) : base(position)
+    public EmergencyUnit(int EmergencyUnitID, EmergencyUnitType type, Station homeStation, AvailabilityStatus status, (int, int) position) : base(position)
     {
+        this.EmergencyUnitID = EmergencyUnitID;
         this.type = type;
         this.homeStation = homeStation;
         this.status = status;
@@ -31,6 +33,14 @@ public class EmergencyUnit : MapObject
     public AvailabilityStatus GetStatus()
     {
         return status;
+    }
+    public int getUnitId()
+    {
+        return EmergencyUnitID;
+    }
+    public void setUnitId(int NewID)
+    {
+        EmergencyUnitID = NewID;
     }
 
 
