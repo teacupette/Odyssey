@@ -8,8 +8,11 @@ public class D_IncidentFetcher
     public Incident GetIncident(int IncidentID)
     {
         if (!File.Exists(filename)) { throw new NullIncidentJsonException(filename + " doesn't exist"); }
+
         Incident[]? incidents = JsonSerializer.Deserialize<Incident[]>(filename);
+
         if (incidents == null) { throw new NullIncidentJsonException(filename + " is null and was referenced"); }
+
         foreach (Incident Current in incidents)
         {
             if (Current.getIncidentId() == IncidentID) { return Current; }
